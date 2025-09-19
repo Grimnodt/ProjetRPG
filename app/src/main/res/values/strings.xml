@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Projet RPG</string>
+    <string name="tu_fuis">Tu fuis ?</string>
+    <string name="button">Button</string>
+    <string name="je_fonce_dans_le_tas">Je fonce dans le tas !</string>
+    <string name="j_appelle_les_copains_et_on_observe">J\'appelle les copains et on observe</string>
+    <string name="c_est_moi_qui_ai_cr_e_le_conflit">C\'est moi qui ai crée le conflit</string>
+    <string name="_1_comment_r_agis_tu_face_un_conflit">1. Comment réagis-tu face à un conflit ?</string>
+    <string name="_2_si_tu_avais_un_pouvoir_ce_serait">2. Si tu avais un pouvoir, ce serait…</string>
+    <string name="quel_personnage_de_fiction_es_tu">Quel personnage de fiction es-tu ?</string>
+
 </resources>
