@@ -8,36 +8,72 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/txTitre1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="86dp"
-        tools:layout_editor_absoluteY="175dp" />
+        android:text="Quel personnage de fiction es-tu ? "
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="46dp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="161dp"
         android:text="Button"
-        tools:layout_editor_absoluteX="222dp"
-        tools:layout_editor_absoluteY="198dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="356dp"
+        android:layout_height="195dp"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="185dp">
+
+        <RadioButton
+            android:id="@+id/rb1Q1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tu fuis ? " />
+
+        <RadioButton
+            android:id="@+id/rb2Q1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Je fonce dans le tas !" />
+
+        <RadioButton
+            android:id="@+id/rb3Q1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/rb4Q1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RadioButton" />
+    </RadioGroup>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txQuestion1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="452dp" />
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="4dp"
+        android:text="Comment réagis-tu face à un conflit ?"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="353dp"
+        android:layout_height="203dp"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="435dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
