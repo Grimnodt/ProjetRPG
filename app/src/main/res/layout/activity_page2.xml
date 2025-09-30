@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Page2">
+
+    <Button
+        android:id="@+id/butPage2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/valider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txQuestion3"
+        android:layout_width="277dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="84dp"
+        android:text="@string/choisissez_1_pouvoir_parmi_les_suivants"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.253"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup3"
+        android:layout_width="180dp"
+        android:layout_height="206dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/txQuestion4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <CheckBox
+            android:id="@+id/cb1Q3"
+            android:layout_width="156dp"
+            android:layout_height="wrap_content"
+            android:text="@string/t_l_portation" />
+
+        <CheckBox
+            android:id="@+id/cb2Q3"
+            android:layout_width="153dp"
+            android:layout_height="wrap_content"
+            android:text="@string/super_vitesse" />
+
+        <CheckBox
+            android:id="@+id/cb3Q3"
+            android:layout_width="153dp"
+            android:layout_height="wrap_content"
+            android:text="@string/vol" />
+
+        <CheckBox
+            android:id="@+id/cb4Q3"
+            android:layout_width="153dp"
+            android:layout_height="wrap_content"
+            android:text="@string/super_puissant"
+            tools:ignore="TextSizeCheck" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txQuestion4"
+        android:layout_width="277dp"
+        android:layout_height="30dp"
+        android:text="@string/choisissez_les_2_armes_que_vous_pr_f_rez"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.268"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup4"
+        android:layout_width="158dp"
+        android:layout_height="206dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/tx_Invalid2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <CheckBox
+            android:id="@+id/cb1Q4"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:text="@string/arc_et_fl_ches" />
+
+        <CheckBox
+            android:id="@+id/cb2Q4"
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:text="@string/p_e" />
+
+        <CheckBox
+            android:id="@+id/cb3Q4"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:text="@string/masse" />
+
+        <CheckBox
+            android:id="@+id/cb4Q4"
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:text="@string/rapi_re" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tx_Invalid2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/butPage2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

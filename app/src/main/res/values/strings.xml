@@ -1,9 +1,5 @@
 <resources>
     <string name="app_name">Projet RPG</string>
-    <string name="fuis">Fuis ?</string>
-    <string name="fonce_dans_le_tas">Fonce dans le tas !</string>
-    <string name="d_sarmorce_la_situation">Désarmorce la situation</string>
-    <string name="ignore_la_situation">Ignore la situation</string>
     <string name="comment_r_agis_tu_face_un_conflit_tu">Comment réagissez-vous face à un conflit ?</string>
     <string name="valider">Valider</string>
     <string name="votre_plus_grande_force_c_est">Votre plus grande force c\'est ?</string>
@@ -16,4 +12,15 @@
     <string name="j_ignore_la_situation">J\'ignore la situation</string>
     <string name="ma_cr_ativit_et_mon_imagination">Ma créativité et mon imagination</string>
     <string name="quel_personnage_de_fiction_es_tu">Quel personnage de fiction es-tu ?</string>
+    <string name="quitter">Quitter</string>
+    <string name="t_l_portation">Téléportation</string>
+    <string name="super_vitesse">Super vitesse</string>
+    <string name="vol">Vol</string>
+    <string name="super_puissant">Super puissant</string>
+    <string name="choisissez_1_pouvoir_parmi_les_suivants">Choisissez 1 pouvoir parmi les suivants.</string>
+    <string name="choisissez_les_2_armes_que_vous_pr_f_rez">Choisissez les 2 armes que vous préférez.</string>
+    <string name="arc_et_fl_ches">Arc et flèches</string>
+    <string name="p_e">Épée</string>
+    <string name="masse">Masse</string>
+    <string name="rapi_re">Rapière</string>
 </resources>
