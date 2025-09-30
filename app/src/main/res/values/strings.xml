@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Projet RPG</string>
+    <string name="fuis">Fuis ?</string>
+    <string name="fonce_dans_le_tas">Fonce dans le tas !</string>
+    <string name="d_sarmorce_la_situation">Désarmorce la situation</string>
+    <string name="ignore_la_situation">Ignore la situation</string>
+    <string name="comment_r_agis_tu_face_un_conflit_tu">Comment réagissez-vous face à un conflit ?</string>
+    <string name="valider">Valider</string>
+    <string name="votre_plus_grande_force_c_est">Votre plus grande force c\'est ?</string>
+    <string name="je_fuis">Je fuis</string>
+    <string name="mon_intelligence_et_ma_capacit_d_analyse">Mon intelligence et ma capacité d\'analyse</string>
+    <string name="je_fonce_dans_le_tas">Je fonce dans le tas !</string>
+    <string name="ma_loyaut_et_mon_courage">Ma loyauté et mon courage</string>
+    <string name="je_d_samorce_la_situation">Je désamorce la situation</string>
+    <string name="mon_charisme_et_mon_humour">Mon charisme et mon humour</string>
+    <string name="j_ignore_la_situation">J\'ignore la situation</string>
+    <string name="ma_cr_ativit_et_mon_imagination">Ma créativité et mon imagination</string>
+    <string name="quel_personnage_de_fiction_es_tu">Quel personnage de fiction es-tu ?</string>
 </resources>

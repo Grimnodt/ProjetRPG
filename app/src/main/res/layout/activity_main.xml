@@ -11,53 +11,12 @@
         android:id="@+id/txTitre1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quel personnage de fiction es-tu ? "
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="46dp" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="161dp"
-        android:text="Button"
+        android:text="@string/quel_personnage_de_fiction_es_tu"
+        app:layout_constraintBottom_toTopOf="@+id/txQuestion1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="356dp"
-        android:layout_height="195dp"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="185dp">
-
-        <RadioButton
-            android:id="@+id/rb1Q1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tu fuis ? " />
-
-        <RadioButton
-            android:id="@+id/rb2Q1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Je fonce dans le tas !" />
-
-        <RadioButton
-            android:id="@+id/rb3Q1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="RadioButton" />
-
-        <RadioButton
-            android:id="@+id/rb4Q1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="RadioButton" />
-    </RadioGroup>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.531" />
 
     <TextView
         android:id="@+id/txQuestion1"
@@ -65,15 +24,97 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginBottom="4dp"
-        android:text="Comment réagis-tu face à un conflit ?"
+        android:text="@string/comment_r_agis_tu_face_un_conflit_tu"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="320dp"
+        android:layout_height="195dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/txQuestion2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/rb1Q1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/je_fuis" />
+
+        <RadioButton
+            android:id="@+id/rb2Q1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/je_fonce_dans_le_tas" />
+
+        <RadioButton
+            android:id="@+id/rb3Q1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/je_d_samorce_la_situation" />
+
+        <RadioButton
+            android:id="@+id/rb4Q1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/j_ignore_la_situation" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txQuestion2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="@string/votre_plus_grande_force_c_est"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
         android:id="@+id/radioGroup2"
-        android:layout_width="353dp"
+        android:layout_width="320dp"
         android:layout_height="203dp"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="435dp" />
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/butPage1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/rb1Q2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mon_intelligence_et_ma_capacit_d_analyse" />
+
+        <RadioButton
+            android:id="@+id/rb2Q2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ma_loyaut_et_mon_courage" />
+
+        <RadioButton
+            android:id="@+id/rb3Q2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mon_charisme_et_mon_humour" />
+
+        <RadioButton
+            android:id="@+id/rb4Q2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ma_cr_ativit_et_mon_imagination" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/butPage1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/valider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
