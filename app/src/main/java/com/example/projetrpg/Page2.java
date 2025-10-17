@@ -65,11 +65,7 @@ public class Page2 extends AppCompatActivity {
 
         TextView invalid = findViewById(R.id.tx_Invalid1);
 
-        if ((!check1Q3.isChecked() || !check2Q3.isChecked() || !check3Q3.isChecked() || !check4Q3.isChecked()) ||
-                (!check1Q4.isChecked() || !check2Q4.isChecked() || !check3Q4.isChecked() || !check4Q4.isChecked())){
-            invalid.setText("Une question n'a pas été répondu");
-            return;
-        }
+
 
         int resultQ3 = group3.getCheckedRadioButtonId();
         int resultQ4 = group4.getCheckedRadioButtonId();
@@ -79,7 +75,7 @@ public class Page2 extends AppCompatActivity {
             return;
         }
 
-        ArrayList<Integer> resultQ03 = new ArrayList<>();
+        /*ArrayList<Integer> resultQ03 = new ArrayList<>();
         if (cb1.isChecked()) resultQ3.add(1);
         if (cb2.isChecked()) resultQ3.add(2);
         if (cb3.isChecked()) resultQ3.add(3);
@@ -89,7 +85,7 @@ public class Page2 extends AppCompatActivity {
         if (check1Q4.isChecked()) resultQ3.add(1);
         if (check2Q4.isChecked()) resultQ3.add(2);
         if (check3Q4.isChecked()) resultQ3.add(3);
-        if (check4Q4.isChecked()) resultQ3.add(4);
+        if (check4Q4.isChecked()) resultQ3.add(4);*/
 
         Intent intent = new Intent(this, Page2.class);
         intent.putExtra("question 1", resultQ3);
