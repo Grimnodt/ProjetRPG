@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,11 +14,19 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Page2 extends AppCompatActivity {
-    CheckBox cb1, cb2, cb3, cb4;
+
+    private RadioGroup radioGroupQ3;
+    private CheckBox cb1Q4, cb2Q4, cb3Q4, cb4Q4;
+    private TextView invalid;
+
+    private int resultQ1, resultQ2;
+
+    // Constante pour limiter le choix de la Q4
+    private static final int MAX_CHOICES_Q4 = 2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,66 +39,71 @@ public class Page2 extends AppCompatActivity {
         });
 
         Intent intent = getIntent();
-        int resultQ3 = intent.getIntExtra("question 3", -1);
-        int resultQ4 = intent.getIntExtra("question 4", -1);
+        resultQ1 = intent.getIntExtra("question 1", -1);
+        resultQ2 = intent.getIntExtra("question 2", -1);
 
-        CheckBox cb1 = findViewById(R.id.cb1Q3);
-        CheckBox cb2 = findViewById(R.id.cb2Q3);
-        CheckBox cb3 = findViewById(R.id.cb3Q3);
-        CheckBox cb4 = findViewById(R.id.cb4Q3);
+        invalid = findViewById(R.id.tx_Invalid1);
 
-        View.OnClickListener listener = v -> {
-            cb1.setChecked(v == cb1);
-            cb2.setChecked(v == cb2);
-            cb3.setChecked(v == cb3);
-            cb4.setChecked(v == cb4);
+        radioGroupQ3 = findViewById(R.id.radioGroup3);
+
+        // Initialisation des CheckBox pour la Q4
+        cb1Q4 = findViewById(R.id.cb1Q4);
+        cb2Q4 = findViewById(R.id.cb2Q4);
+        cb3Q4 = findViewById(R.id.cb3Q4);
+        cb4Q4 = findViewById(R.id.cb4Q4);
+
+        View.OnClickListener limitListenerQ4 = v -> {
+            if (getCheckedCountQ4() > MAX_CHOICES_Q4) {
+                ((CheckBox) v).setChecked(false);
+                Toast.makeText(this, "Vous ne pouvez choisir que " + MAX_CHOICES_Q4 + " options.", Toast.LENGTH_SHORT).show();
+            }
         };
-
-        cb1.setOnClickListener(listener);
-        cb2.setOnClickListener(listener);
-        cb3.setOnClickListener(listener);
-        cb4.setOnClickListener(listener);
+        cb1Q4.setOnClickListener(limitListenerQ4);
+        cb2Q4.setOnClickListener(limitListenerQ4);
+        cb3Q4.setOnClickListener(limitListenerQ4);
+        cb4Q4.setOnClickListener(limitListenerQ4);
     }
-
     public void onValiderClick(View view) {
-        RadioGroup group3 = findViewById(R.id.radioGroup3);
-        RadioGroup group4 = findViewById(R.id.radioGroup4);
-        CheckBox check1Q3 = findViewById(R.id.cb1Q3);
-        CheckBox check2Q3 = findViewById(R.id.cb2Q3);
-        CheckBox check3Q3 = findViewById(R.id.cb3Q3);
-        CheckBox check4Q3 = findViewById(R.id.cb4Q3);
-        CheckBox check1Q4 = findViewById(R.id.cb1Q4);
-        CheckBox check2Q4 = findViewById(R.id.cb2Q4);
-        CheckBox check3Q4 = findViewById(R.id.cb3Q4);
-        CheckBox check4Q4 = findViewById(R.id.cb4Q4);
+        boolean isQ3Answered = radioGroupQ3.getCheckedRadioButtonId() != -1;
+        boolean isQ4Answered = isAnyCheckedQ(cb1Q4, cb2Q4, cb3Q4, cb4Q4);
 
-        TextView invalid = findViewById(R.id.tx_Invalid1);
-
-
-
-        int resultQ3 = group3.getCheckedRadioButtonId();
-        int resultQ4 = group4.getCheckedRadioButtonId();
-
-        if (group3.getCheckedRadioButtonId() == -1 || group4.getCheckedRadioButtonId() == -1){
-            invalid.setText("Une question n'a pas été répondu");
+        if (!isQ3Answered || !isQ4Answered) {
+            invalid.setText("Veuillez répondre à toutes les questions.");
             return;
         }
 
-        /*ArrayList<Integer> resultQ03 = new ArrayList<>();
-        if (cb1.isChecked()) resultQ3.add(1);
-        if (cb2.isChecked()) resultQ3.add(2);
-        if (cb3.isChecked()) resultQ3.add(3);
-        if (cb4.isChecked()) resultQ3.add(4);
+        int resultQ3 = radioGroupQ3.getCheckedRadioButtonId();
 
-        ArrayList<Integer> resultQ04 = new ArrayList<>();
-        if (check1Q4.isChecked()) resultQ3.add(1);
-        if (check2Q4.isChecked()) resultQ3.add(2);
-        if (check3Q4.isChecked()) resultQ3.add(3);
-        if (check4Q4.isChecked()) resultQ3.add(4);*/
+        ArrayList<Integer> resultQ4 = new ArrayList<>();
+        if (cb1Q4.isChecked()) resultQ4.add(R.id.cb1Q4);
+        if (cb2Q4.isChecked()) resultQ4.add(R.id.cb2Q4);
+        if (cb3Q4.isChecked()) resultQ4.add(R.id.cb3Q4);
+        if (cb4Q4.isChecked()) resultQ4.add(R.id.cb4Q4);
 
-        Intent intent = new Intent(this, Page2.class);
-        intent.putExtra("question 1", resultQ3);
-        intent.putExtra("question 2", resultQ4);
+
+        Intent intent = new Intent(this, Page3.class);
+
+        intent.putExtra("question 1", resultQ1);
+        intent.putExtra("question 2", resultQ2);
+        intent.putExtra("question 3", resultQ3); // CORRIGÉ : On passe un simple 'int'
+        intent.putIntegerArrayListExtra("question 4", resultQ4);
+
         startActivity(intent);
+    }
+
+    private int getCheckedCountQ4() {
+        int count = 0;
+        if (cb1Q4.isChecked()) count++;
+        if (cb2Q4.isChecked()) count++;
+        if (cb3Q4.isChecked()) count++;
+        if (cb4Q4.isChecked()) count++;
+        return count;
+    }
+
+    private boolean isAnyCheckedQ(CheckBox... checkBoxes) {
+        for (CheckBox cb : checkBoxes) {
+            if (cb.isChecked()) return true;
+        }
+        return false;
     }
 }
