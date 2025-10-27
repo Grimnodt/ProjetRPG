@@ -24,5 +24,11 @@
     <string name="masse">Masse</string>
     <string name="rapi_re">Rapière</string>
     <string name="Q5">Rapière</string>
+    <string name="are_you_above_18_years_old">Are you above 18 years old ?</string>
+    <string name="above_18">Above 18 :</string>
+    <string name="confirm_that_you_are_above_18_years_old_to_continue">Confirm that you are above 18 years old to continue.</string>
+    <string name="avez_vous_bien_18_pour_continuer">Avez-vous bien 18 pour continuer ?</string>
+    <string name="_18_ans">18 ans :</string>
+    <string name="majeur">Majeur :</string>
 
 </resources>

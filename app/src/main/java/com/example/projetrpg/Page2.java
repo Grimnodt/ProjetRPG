@@ -42,7 +42,7 @@ public class Page2 extends AppCompatActivity {
         resultQ1 = intent.getIntExtra("question 1", -1);
         resultQ2 = intent.getIntExtra("question 2", -1);
 
-        invalid = findViewById(R.id.tx_Invalid1);
+        invalid = findViewById(R.id.tx_Invalid2);
 
         radioGroupQ3 = findViewById(R.id.radioGroup3);
 
