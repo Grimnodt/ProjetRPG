@@ -85,7 +85,7 @@ public class Page2 extends AppCompatActivity {
 
         intent.putExtra("question 1", resultQ1);
         intent.putExtra("question 2", resultQ2);
-        intent.putExtra("question 3", resultQ3); // CORRIGÉ : On passe un simple 'int'
+        intent.putExtra("question 3", resultQ3);
         intent.putIntegerArrayListExtra("question 4", resultQ4);
 
         startActivity(intent);

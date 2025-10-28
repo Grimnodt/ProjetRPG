@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Switch;
-import android.widget.TextView; // Pour l'exemple
+import android.widget.TextView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +25,8 @@ public class Page3 extends AppCompatActivity {
     private Switch above18;
 
     private TextView invalid;
+    private Spinner monSpinner;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,13 +53,22 @@ public class Page3 extends AppCompatActivity {
         // Assurez-vous d'avoir un TextView avec l'id "test_affichage" dans activity_page3.xml
         // TextView testTextView = findViewById(R.id.test_affichage);
         // testTextView.setText("ID de la réponse Q1 : " + resultQ1);
+
+        monSpinner = findViewById(R.id.spQ5);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+                this,
+                R.array.liste_de_mots, // Votre liste de mots dans strings.xml
+                android.R.layout.simple_spinner_item // Layout standard pour l'élément affiché
+        );
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        monSpinner.setAdapter(adapter);
     }
 
     public void onValiderClick(View view) {
         //boolean isQ5Answered = radioGroupQ3.getCheckedRadioButtonId() != -1;
 
         if (!above18.isChecked()) {
-            invalid.setText("Veuillez avoir 18 ans pour continuer.");
+            invalid.setText("Veuillez cocher que le formulaire vous plaît. Merci. ");
             return;
         }
 
@@ -68,15 +81,15 @@ public class Page3 extends AppCompatActivity {
         if (cb3Q4.isChecked()) resultQ4.add(R.id.cb3Q4);
         if (cb4Q4.isChecked()) resultQ4.add(R.id.cb4Q4);*/
 
+        String motChoisi = monSpinner.getSelectedItem().toString();
 
-            //PAGE 4 A FAIRE, OU ALORS ON TERMINE LA ET ON FAIT LA CONCLUSION DU QUESTIONNAIRE PLUTOT.
+        Intent intent = new Intent(this, Page4.class);
 
-        //Intent intent = new Intent(this, Page4.class);
-
-        /*intent.putExtra("question 1", resultQ1);
+        intent.putExtra("question 1", resultQ1);
         intent.putExtra("question 2", resultQ2);
-        intent.putExtra("question 3", resultQ3); // CORRIGÉ : On passe un simple 'int'
-        intent.putIntegerArrayListExtra("question 4", resultQ4);*/
+        intent.putExtra("question 3", resultQ3);
+        intent.putIntegerArrayListExtra("question 4", resultQ4);
+        intent.putExtra("question_mot_choisi", motChoisi);
 
         //startActivity(intent);
     }

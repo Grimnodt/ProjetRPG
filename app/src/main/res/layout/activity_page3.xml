@@ -11,34 +11,33 @@
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginBottom="316dp"
+        android:layout_marginTop="26dp"
         android:text="@string/majeur"
-        app:layout_constraintBottom_toTopOf="@+id/tx_Invalid"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.101"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <Button
         android:id="@+id/butPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="24dp"
         android:onClick="onValiderClick"
         android:text="@string/valider"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.531"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tx_Invalid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/butPage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintHorizontal_bias="0.077"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -46,9 +45,68 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:text="@string/avez_vous_bien_18_pour_continuer"
-        app:layout_constraintBottom_toTopOf="@+id/switch1"
+        android:layout_marginTop="131dp"
+        android:text="@string/aimez_vous_le_formulaire"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.786" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spQ5"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="144dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/si_tu_avais_le_choix_de_sauver_ton_ta_mari_femme_ou_bien_un_village_qui_sauverez_tu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch1" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/une_proph_tie_annonce_votre_destin_e_comment_ragissez_vous"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spQ5" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="436dp"
+        app:layout_constraintBottom_toTopOf="@+id/butPage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rb1Q7"
+            android:layout_width="301dp"
+            android:layout_height="wrap_content"
+            android:text="@string/je_refuse_qu_on_m_impose_un_chemin_je_forgerai_ma_propre_destin_e_pour_tre_le_h_ros_num_ro_1" />
+
+        <RadioButton
+            android:id="@+id/rb2Q7"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pfff_le_destin_je_vais_le_d_truire_si_c_est_ma_volont_qui_osera_m_arr_ter" />
+
+        <RadioButton
+            android:id="@+id/rb3Q7"
+            android:layout_width="299dp"
+            android:layout_height="wrap_content"
+            android:text="@string/je_suis_l_lu_j_accepte_mon_destin_et_je_me_pr_pare_l_accomplir" />
+
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
