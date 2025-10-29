@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetRPG">
         <activity
+            android:name=".result"
+            android:exported="false" />
+        <activity
             android:name=".P4"
             android:exported="false" />
         <activity
