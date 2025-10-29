@@ -7,6 +7,19 @@
     android:layout_height="match_parent"
     tools:context=".Page2">
 
+    <TextView
+        android:id="@+id/txTitre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/quel_personnage_de_fiction_es_tu"
+        app:layout_constraintBottom_toTopOf="@+id/txQuestion1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.453" />
+
     <Button
         android:id="@+id/butPage2"
         android:layout_width="wrap_content"
