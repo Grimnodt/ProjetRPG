@@ -34,6 +34,7 @@
     <string name="je_refuse_qu_on_m_impose_un_chemin_je_forgerai_ma_propre_destin_e_pour_tre_le_h_ros_num_ro_1">Je refuse qu\'on m\'impose un chemin. Je forgerai ma propre destinée pour être le héros numéro 1.</string>
     <string name="pfff_le_destin_je_vais_le_d_truire_si_c_est_ma_volont_qui_osera_m_arr_ter">Pfff, le destin ? Je vais le détruire, si c\'est ma volonté qui osera m\'arréter ?</string>
     <string name="je_suis_l_lu_j_accepte_mon_destin_et_je_me_pr_pare_l_accomplir">Je suis l\'élu. J\'accepte mon destin et je me prépare à l\'accomplir.</string>
+    <string name="quel_personnage_es_tu">Quel personnage es-tu ?</string>
     <string-array name="liste_de_mots">
         <item>Sauver la ville.</item>
         <item>Sauver mon/ma mari/femme.</item>
