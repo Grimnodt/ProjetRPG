@@ -44,6 +44,10 @@
     <string name="nezuko">Nezuko</string>
     <string name="muzan">Muzan</string>
     <string name="es_tu_vraiment_s_r_de_ton_choix">Es-tu vraiment sûr de ton choix ?</string>
+    <string name="je_le_d_truis_quel_qu_en_soit_le_prix">Je le détruis, quel qu\'en soit le prix.</string>
+    <string name="je_tente_de_l_utiliser_pour_faire_le_bien_malgr_les_risques">Je tente de l\'utiliser pour faire le bien, malgré les risques.</string>
+    <string name="ce_pouvoir_est_moi_je_l_utiliserai_pour_atteindre_mes_propres_objectifs">Ce pouvoir est à moi. Je l\'utiliserai pour atteindre mes propres objectifs.</string>
+    <string name="je_le_cache_du_monde_pour_prot_ger_les_autres_et_moi_m_me">Je le cache du monde pour protéger les autres et moi-même.</string>
     <string-array name="liste_de_mots">
         <item>Sauver la ville.</item>
         <item>Sauver mon/ma mari/femme.</item>

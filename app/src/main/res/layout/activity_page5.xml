@@ -31,37 +31,37 @@
         app:layout_constraintTop_toBottomOf="@+id/txTitre3" />
 
     <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="354dp"
+        android:layout_height="201dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="116dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvQ10">
 
         <RadioButton
             android:id="@+id/rb1Q10"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Je le détruis, quel qu'en soit le prix." />
+            android:text="@string/je_le_d_truis_quel_qu_en_soit_le_prix" />
 
         <RadioButton
             android:id="@+id/rb2Q10"
-            android:layout_width="match_parent"
+            android:layout_width="255dp"
             android:layout_height="wrap_content"
-            android:text="Je tente de l'utiliser pour faire le bien, malgré les risques." />
+            android:text="@string/je_tente_de_l_utiliser_pour_faire_le_bien_malgr_les_risques" />
 
         <RadioButton
             android:id="@+id/rb3Q10"
-            android:layout_width="match_parent"
+            android:layout_width="261dp"
             android:layout_height="wrap_content"
-            android:text="Je le cache du monde pour protéger les autres et moi-même." />
+            android:text="@string/je_le_cache_du_monde_pour_prot_ger_les_autres_et_moi_m_me" />
 
         <RadioButton
             android:id="@+id/rb4Q10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ce pouvoir est à moi. Je l'utiliserai pour atteindre mes propres objectifs." />
+            android:text="@string/ce_pouvoir_est_moi_je_l_utiliserai_pour_atteindre_mes_propres_objectifs" />
     </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>
