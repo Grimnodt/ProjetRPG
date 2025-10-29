@@ -72,8 +72,8 @@ public class Page3 extends AppCompatActivity {
             return;
         }
 
-        invalid.setText("Félicitations, vous avez fini le questionnaire, " +
-                "nous allons maintenant déterminer votre personnage.");
+        /*invalid.setText("Félicitations, vous avez fini le questionnaire, " +
+                "nous allons maintenant déterminer votre personnage.");*/
 
         /*ArrayList<Integer> resultQ4 = new ArrayList<>();
         if (cb1Q4.isChecked()) resultQ4.add(R.id.cb1Q4);
@@ -91,6 +91,6 @@ public class Page3 extends AppCompatActivity {
         intent.putIntegerArrayListExtra("question 4", resultQ4);
         intent.putExtra("question_mot_choisi", motChoisi);
 
-        //startActivity(intent);
+        startActivity(intent);
     }
 }
