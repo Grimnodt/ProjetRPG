@@ -36,13 +36,10 @@ public class P4 extends AppCompatActivity {
 
     public void onValiderClick(View view) {
 
-        if ((radioGroup.getCheckedRadioButtonId() != -1) || (!_switch.isChecked())) {
+        if ((radioGroup.getCheckedRadioButtonId() == -1) || (!_switch.isChecked())) {
             invalid.setText("Veuillez sélectionner une réponse. ");
             return;
         }
-
-        invalid.setText("Félicitations, vous avez fini le questionnaire, " +
-                "nous allons maintenant déterminer votre personnage.");
 
         Intent intent = new Intent(this, activity_page5.class);
         startActivity(intent);
