@@ -1,7 +1,10 @@
 package com.example.projetrpg;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RadioGroup;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -13,6 +16,8 @@ import androidx.core.view.WindowInsetsCompat;
 public class P4 extends AppCompatActivity {
 
     private TextView invalid;
+    private RadioGroup radioGroup;
+    private Switch _switch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,19 +30,21 @@ public class P4 extends AppCompatActivity {
             return insets;
         });
         invalid = findViewById(R.id.tx_Invalid4);
+        radioGroup = findViewById(R.id.radioGroup);
+        _switch = findViewById(R.id.switch3);
     }
 
     public void onValiderClick(View view) {
 
-       /* if (!tanjiro_red.isPressed() || !tanjiro_blue.isPressed()) {
-            invalid.setText("Veuillez cocher que le formulaire vous plaît. Merci. ");
+        if ((radioGroup.getCheckedRadioButtonId() != -1) || (!_switch.isChecked())) {
+            invalid.setText("Veuillez sélectionner une réponse. ");
             return;
-        }*/
+        }
 
         invalid.setText("Félicitations, vous avez fini le questionnaire, " +
                 "nous allons maintenant déterminer votre personnage.");
 
-        //Intent intent = new Intent(this, Page5.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, activity_page5.class);
+        startActivity(intent);
     }
 }

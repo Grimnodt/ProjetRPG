@@ -83,7 +83,7 @@ public class Page3 extends AppCompatActivity {
 
         String motChoisi = monSpinner.getSelectedItem().toString();
 
-        Intent intent = new Intent(this, Page4.class);
+        Intent intent = new Intent(this, P4.class);
 
         intent.putExtra("question 1", resultQ1);
         intent.putExtra("question 2", resultQ2);
