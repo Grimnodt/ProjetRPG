@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_page5">
+
+    <TextView
+        android:id="@+id/txTitre3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/quel_personnage_de_fiction_es_tu"
+        app:layout_constraintBottom_toTopOf="@+id/txQuestion1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.453" />
+
+    <TextView
+        android:id="@+id/tvQ10"
+        android:layout_width="339dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="54dp"
+        android:text="@string/vous_trouvez_un_artefact_de_pouvoir_immense_et_corrupteur_comme_un_livre_de_n_cromancie_ou_l_anneau_unique_du_pouvoir_que_faites_vous"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txTitre3" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="116dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvQ10">
+
+        <RadioButton
+            android:id="@+id/rb1Q10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Je le détruis, quel qu'en soit le prix." />
+
+        <RadioButton
+            android:id="@+id/rb2Q10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Je tente de l'utiliser pour faire le bien, malgré les risques." />
+
+        <RadioButton
+            android:id="@+id/rb3Q10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Je le cache du monde pour protéger les autres et moi-même." />
+
+        <RadioButton
+            android:id="@+id/rb4Q10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ce pouvoir est à moi. Je l'utiliserai pour atteindre mes propres objectifs." />
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>

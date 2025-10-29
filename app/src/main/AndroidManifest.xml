@@ -13,7 +13,7 @@
         android:theme="@style/Theme.ProjetRPG">
         <activity
             android:name=".P4"
-            android:exported="false" /> <!-- oo -->
+            android:exported="false" />
         <activity
             android:name=".Page3"
             android:exported="false" />
