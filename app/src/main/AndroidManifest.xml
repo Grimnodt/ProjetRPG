@@ -26,6 +26,9 @@
         <activity
             android:name=".Page2"
             android:exported="false" />
+        <activity
+            android:name=".Page4"
+            android:exported="false" />
     </application>
 
 </manifest>
