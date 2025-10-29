@@ -56,6 +56,7 @@
         <item>Je sauve Gotham.</item>
         <item>Je deviens allié avec les méchants menancant de les tuer.</item>
     </string-array>
-
+    <string name="Q10"> Vous trouvez un artefact de pouvoir immense et corrupteur, comme le Péché du réconfort ou Anneau Unique. Que faites vous ?</string>
+    <string name="vous_trouvez_un_artefact_de_pouvoir_immense_et_corrupteur_comme_le_p_ch_du_r_confort_ou_l_anneau_unique_que_faites_vous">Vous trouvez un artefact de pouvoir immense et corrupteur, comme le Péché du réconfort ou l\'Anneau Unique. Que faites-vous ?</string>
 
 </resources>

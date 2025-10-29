@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:text="@string/quel_personnage_de_fiction_es_tu"
-        app:layout_constraintBottom_toTopOf="@+id/txQuestion1"
+        app:layout_constraintBottom_toTopOf="@id/tvQ10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,13 +22,14 @@
 
     <TextView
         android:id="@+id/tvQ10"
-        android:layout_width="339dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="54dp"
-        android:text="@string/vous_trouvez_un_artefact_de_pouvoir_immense_et_corrupteur_comme_un_livre_de_n_cromancie_ou_l_anneau_unique_du_pouvoir_que_faites_vous"
+        android:layout_width="341dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/vous_trouvez_un_artefact_de_pouvoir_immense_et_corrupteur_comme_le_p_ch_du_r_confort_ou_l_anneau_unique_que_faites_vous"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txTitre3" />
+        app:layout_constraintTop_toBottomOf="@+id/txTitre3"
+        tools:ignore="TextSizeCheck" />
 
     <RadioGroup
         android:layout_width="354dp"
@@ -50,18 +51,21 @@
             android:id="@+id/rb2Q10"
             android:layout_width="255dp"
             android:layout_height="wrap_content"
-            android:text="@string/je_tente_de_l_utiliser_pour_faire_le_bien_malgr_les_risques" />
+            android:text="@string/je_tente_de_l_utiliser_pour_faire_le_bien_malgr_les_risques"
+            tools:ignore="TextSizeCheck" />
 
         <RadioButton
             android:id="@+id/rb3Q10"
             android:layout_width="261dp"
             android:layout_height="wrap_content"
-            android:text="@string/je_le_cache_du_monde_pour_prot_ger_les_autres_et_moi_m_me" />
+            android:text="@string/je_le_cache_du_monde_pour_prot_ger_les_autres_et_moi_m_me"
+            tools:ignore="TextSizeCheck" />
 
         <RadioButton
             android:id="@+id/rb4Q10"
-            android:layout_width="match_parent"
+            android:layout_width="253dp"
             android:layout_height="wrap_content"
-            android:text="@string/ce_pouvoir_est_moi_je_l_utiliserai_pour_atteindre_mes_propres_objectifs" />
+            android:text="@string/ce_pouvoir_est_moi_je_l_utiliserai_pour_atteindre_mes_propres_objectifs"
+            tools:ignore="TextSizeCheck" />
     </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>
