@@ -35,6 +35,14 @@
     <string name="pfff_le_destin_je_vais_le_d_truire_si_c_est_ma_volont_qui_osera_m_arr_ter">Pfff, le destin ? Je vais le détruire, si c\'est ma volonté qui osera m\'arréter ?</string>
     <string name="je_suis_l_lu_j_accepte_mon_destin_et_je_me_pr_pare_l_accomplir">Je suis l\'élu. J\'accepte mon destin et je me prépare à l\'accomplir.</string>
     <string name="quel_personnage_es_tu">Quel personnage es-tu ?</string>
+    <string name="quel_est_ton_personnage_pr_f_r_de_demon_slayer">Quel est ton personnage préféré de Demon Slayer ?</string>
+    <string name="tanjiro">Tanjiro</string>
+    <string name="zenitsu">Zenitsu</string>
+    <string name="inosuke">Inosuke</string>
+    <string name="es_tu_s_r_de_ton_choix">Es-tu sûr de ton choix ?</string>
+    <string name="oui">Oui ?</string>
+    <string name="nezuko">Nezuko</string>
+    <string name="muzan">Muzan</string>
     <string-array name="liste_de_mots">
         <item>Sauver la ville.</item>
         <item>Sauver mon/ma mari/femme.</item>

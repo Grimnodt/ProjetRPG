@@ -9,7 +9,7 @@
         android:id="@+id/butPage3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="44dp"
         android:onClick="onValiderClick"
         android:text="@string/valider"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,21 +20,85 @@
         android:id="@+id/tx_Invalid3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/butPage3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.194"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.87" />
+        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="76dp"
-        android:text="@string/quel_personnage_es_tu"
+        android:text="@string/quel_est_ton_personnage_pr_f_r_de_demon_slayer"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.553" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="247dp"
+        android:layout_height="267dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.274"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tanjiro" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/zenitsu" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/inosuke" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nezuko" />
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/muzan" />
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="44dp"
+        android:text="@string/oui"
+        app:layout_constraintBottom_toTopOf="@+id/tx_Invalid3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/es_tu_s_r_de_ton_choix"
+        app:layout_constraintBottom_toTopOf="@+id/switch2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.168"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
