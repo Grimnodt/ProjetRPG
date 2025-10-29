@@ -43,6 +43,7 @@
     <string name="oui">Oui ?</string>
     <string name="nezuko">Nezuko</string>
     <string name="muzan">Muzan</string>
+    <string name="es_tu_vraiment_s_r_de_ton_choix">Es-tu vraiment sûr de ton choix ?</string>
     <string-array name="liste_de_mots">
         <item>Sauver la ville.</item>
         <item>Sauver mon/ma mari/femme.</item>

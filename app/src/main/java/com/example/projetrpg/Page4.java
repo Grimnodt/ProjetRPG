@@ -16,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Page4 extends AppCompatActivity {
 
-    private TextView invalid = findViewById(R.id.tx_Invalid3);
+    private TextView invalid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,7 @@ public class Page4 extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        invalid = findViewById(R.id.tx_Invalid3);
     }
 
     public void onValiderClick(View view) {
@@ -41,5 +42,6 @@ public class Page4 extends AppCompatActivity {
                 "nous allons maintenant déterminer votre personnage.");
 
         Intent intent = new Intent(this, Page5.class);
+        startActivity(intent);
     }
 }

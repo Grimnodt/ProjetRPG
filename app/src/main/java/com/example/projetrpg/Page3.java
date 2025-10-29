@@ -91,6 +91,6 @@ public class Page3 extends AppCompatActivity {
         intent.putIntegerArrayListExtra("question 4", resultQ4);
         intent.putExtra("question_mot_choisi", motChoisi);
 
-        //startActivity(intent);
+        startActivity(intent);
     }
 }

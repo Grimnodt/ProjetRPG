@@ -95,10 +95,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:text="@string/es_tu_s_r_de_ton_choix"
+        android:text="@string/es_tu_vraiment_s_r_de_ton_choix"
         app:layout_constraintBottom_toTopOf="@+id/switch2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.168"
+        app:layout_constraintHorizontal_bias="0.215"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
