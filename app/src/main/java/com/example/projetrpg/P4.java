@@ -44,7 +44,7 @@ public class P4 extends AppCompatActivity {
         invalid.setText("Félicitations, vous avez fini le questionnaire, " +
                 "nous allons maintenant déterminer votre personnage.");
 
-     //   Intent intent = new Intent(this, activity_page5.class);
-     //   startActivity(intent);
+        Intent intent = new Intent(this, activity_page5.class);
+        startActivity(intent);
     }
 }
