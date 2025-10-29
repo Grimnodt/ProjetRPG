@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetRPG">
         <activity
-            android:name=".activity_page5"
-            android:exported="false" />
-        <activity
             android:name=".Page3"
             android:exported="false" />
         <activity
@@ -28,9 +25,6 @@
         </activity>
         <activity
             android:name=".Page2"
-            android:exported="false" />
-        <activity
-            android:name=".Page4"
             android:exported="false" />
     </application>
 

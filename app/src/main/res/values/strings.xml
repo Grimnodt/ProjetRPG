@@ -43,7 +43,7 @@
     <string name="oui">Oui ?</string>
     <string name="nezuko">Nezuko</string>
     <string name="muzan">Muzan</string>
-    <string name="vous_trouvez_un_artefact_de_pouvoir_immense_et_corrupteur_comme_un_livre_de_n_cromancie_ou_l_anneau_unique_du_pouvoir_que_faites_vous">Vous trouvez un artefact de pouvoir immense et corrupteur comme un livre de nécromancie ou l\'Anneau Unique du pouvoir. Que faites vous ?</string>
+    <string name="es_tu_vraiment_s_r_de_ton_choix">Es-tu vraiment sûr de ton choix ?</string>
     <string-array name="liste_de_mots">
         <item>Sauver la ville.</item>
         <item>Sauver mon/ma mari/femme.</item>
