@@ -18,9 +18,6 @@ public class Page4 extends AppCompatActivity {
 
     private TextView invalid = findViewById(R.id.tx_Invalid3);
 
-    private ImageButton tanjiro_red = findViewById(R.id.imageButton5);
-    private ImageButton tanjiro_blue = findViewById(R.id.imageButton6);
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,10 +32,10 @@ public class Page4 extends AppCompatActivity {
 
     public void onValiderClick(View view) {
 
-        if (!tanjiro_red.isPressed() || !tanjiro_blue.isPressed()) {
+       /* if (!tanjiro_red.isPressed() || !tanjiro_blue.isPressed()) {
             invalid.setText("Veuillez cocher que le formulaire vous plaît. Merci. ");
             return;
-        }
+        }*/
 
         invalid.setText("Félicitations, vous avez fini le questionnaire, " +
                 "nous allons maintenant déterminer votre personnage.");
