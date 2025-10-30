@@ -2,19 +2,19 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/cl_main_page5"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:contentDescription="@string/todo"
     tools:context=".Activity_page5">
 
     <TextView
-        android:id="@+id/txTitre3"
+        android:id="@+id/tv_titre5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:text="@string/quel_personnage_de_fiction_es_tu"
-        app:layout_constraintBottom_toTopOf="@id/tvQ10"
+        app:layout_constraintBottom_toTopOf="@id/tv_question10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,18 +22,18 @@
         app:layout_constraintVertical_bias="0.453" />
 
     <TextView
-        android:id="@+id/tvQ10"
+        android:id="@+id/tv_question10"
         android:layout_width="341dp"
         android:layout_height="57dp"
         android:layout_marginTop="52dp"
         android:text="@string/vous_trouvez_un_artefact_de_pouvoir_immense_et_corrupteur_comme_le_p_ch_du_r_confort_ou_l_anneau_unique_que_faites_vous"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txTitre3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_titre5"
         tools:ignore="TextSizeCheck" />
 
     <RadioGroup
-        android:id="@+id/radioGroup5"
+        android:id="@+id/rg_question10"
         android:layout_width="354dp"
         android:layout_height="201dp"
         android:layout_marginStart="36dp"
@@ -41,30 +41,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvQ10">
+        app:layout_constraintTop_toBottomOf="@+id/tv_question10">
 
         <RadioButton
-            android:id="@+id/rb1Q10"
+            android:id="@+id/rb_q10_rep1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/je_le_d_truis_quel_qu_en_soit_le_prix" />
 
         <RadioButton
-            android:id="@+id/rb2Q10"
+            android:id="@+id/rb_q10_rep2"
             android:layout_width="255dp"
             android:layout_height="wrap_content"
             android:text="@string/je_tente_de_l_utiliser_pour_faire_le_bien_malgr_les_risques"
             tools:ignore="TextSizeCheck" />
 
         <RadioButton
-            android:id="@+id/rb3Q10"
+            android:id="@+id/rb_q10_rep3"
             android:layout_width="261dp"
             android:layout_height="wrap_content"
             android:text="@string/je_le_cache_du_monde_pour_prot_ger_les_autres_et_moi_m_me"
             tools:ignore="TextSizeCheck" />
 
         <RadioButton
-            android:id="@+id/rb4Q10"
+            android:id="@+id/rb_q10_rep4"
             android:layout_width="253dp"
             android:layout_height="wrap_content"
             android:text="@string/ce_pouvoir_est_moi_je_l_utiliserai_pour_atteindre_mes_propres_objectifs"
@@ -72,81 +72,82 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/tvQ11"
+        android:id="@+id/tv_question11"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="12dp"
         android:text="@string/quel_paysage_vous_appelle_le_plus_pour_commencer_votre_aventure"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup5"
+        app:layout_constraintTop_toBottomOf="@+id/rg_question10"
         tools:ignore="TextSizeCheck" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/iv_paysage1"
         android:layout_width="174dp"
         android:layout_height="146dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="34dp"
         android:contentDescription="@string/description_paysage_sombre"
-        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintEnd_toStartOf="@+id/iv_paysage2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvQ11"
+        app:layout_constraintTop_toBottomOf="@+id/tv_question11"
         app:srcCompat="@drawable/moyen_age_ville" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/iv_paysage2"
         android:layout_width="110dp"
         android:layout_height="169dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="36dp"
         android:contentDescription="@string/description_paysage_colore"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvQ11"
+        app:layout_constraintTop_toBottomOf="@+id/tv_question11"
         app:srcCompat="@drawable/ville_future" />
 
     <RadioGroup
-        android:id="@+id/radioGroup6"
+        android:id="@+id/rg_question11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
         android:layout_marginEnd="162dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+        app:layout_constraintEnd_toStartOf="@+id/iv_paysage2"
+        app:layout_constraintTop_toBottomOf="@+id/iv_paysage1">
 
         <RadioButton
-            android:id="@+id/rb1Q11"
+            android:id="@+id/rb_q11_rep1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/_1" />
 
         <RadioButton
-            android:id="@+id/rb2Q11"
+            android:id="@+id/rb_q11_rep2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/_2" />
     </RadioGroup>
 
     <TextView
-        android:id="@+id/tx_Invalid5"
+        android:id="@+id/tv_invalid5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text=""
         android:textColor="@android:color/holo_red_dark"
-        app:layout_constraintBottom_toTopOf="@+id/btp5"
+        app:layout_constraintBottom_toTopOf="@+id/btn_valider5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btp5"
+        android:id="@+id/btn_valider5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="81dp"
         android:layout_marginTop="25dp"
+        android:onClick="onValiderClick"
         android:text="@string/valider"
-        app:layout_constraintStart_toEndOf="@+id/radioGroup6"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintStart_toEndOf="@+id/rg_question11"
+        app:layout_constraintTop_toBottomOf="@+id/iv_paysage2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
