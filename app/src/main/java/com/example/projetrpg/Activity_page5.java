@@ -15,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
 
-public class activity_page5 extends AppCompatActivity {
+public class Activity_page5 extends AppCompatActivity {
 
     // --- 1. Déclaration des vues de CETTE page (Q10 & Q11) ---
     private TextView invalid;

@@ -43,7 +43,7 @@ public class P4 extends AppCompatActivity {
             return;
         }
 
-        Intent intent = new Intent(this, activity_page5.class);
+        Intent intent = new Intent(this, Activity_page5.class);
         startActivity(intent);
     }
 }
