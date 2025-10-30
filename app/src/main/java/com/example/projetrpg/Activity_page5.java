@@ -34,7 +34,7 @@ public class Activity_page5 extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_page5);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.cl_main_page5), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
