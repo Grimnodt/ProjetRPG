@@ -8,12 +8,12 @@
     tools:context=".Page2">
 
     <TextView
-        android:id="@+id/txTitre"
+        android:id="@+id/tv_titre2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:text="@string/quel_personnage_de_fiction_es_tu"
-        app:layout_constraintBottom_toTopOf="@+id/txQuestion1"
+        app:layout_constraintBottom_toTopOf="@+id/tv_question3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.453" />
 
     <Button
-        android:id="@+id/butPage2"
+        android:id="@+id/btn_valider2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -33,7 +33,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/txQuestion3"
+        android:id="@+id/tv_question3"
         android:layout_width="277dp"
         android:layout_height="30dp"
         android:layout_marginTop="84dp"
@@ -44,91 +44,92 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
-        android:id="@+id/radioGroup3"
+        android:id="@+id/rg_question3"
         android:layout_width="180dp"
         android:layout_height="206dp"
         android:layout_marginBottom="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/txQuestion4"
+        app:layout_constraintBottom_toTopOf="@+id/tv_question4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.147"
         app:layout_constraintStart_toStartOf="parent">
 
         <RadioButton
-            android:id="@+id/cb1Q3"
+            android:id="@+id/rb_q3_rep1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/t_l_portation" />
 
         <RadioButton
-            android:id="@+id/cb2Q3"
+            android:id="@+id/rb_q3_rep2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/super_vitesse" />
 
         <RadioButton
-            android:id="@+id/cb3Q3"
+            android:id="@+id/rb_q3_rep3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/vol" />
 
         <RadioButton
-            android:id="@+id/cb4Q3"
+            android:id="@+id/rb_q3_rep4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/super_puissant" />
     </RadioGroup>
 
     <TextView
-        android:id="@+id/txQuestion4"
+        android:id="@+id/tv_question4"
         android:layout_width="277dp"
         android:layout_height="30dp"
         android:text="@string/choisissez_les_2_armes_que_vous_pr_f_rez"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup4"
+        app:layout_constraintBottom_toTopOf="@+id/rg_question4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.268"
         app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup
-        android:id="@+id/radioGroup4"
+        android:id="@+id/rg_question4"
         android:layout_width="158dp"
         android:layout_height="206dp"
         android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/tx_Invalid2"
+        app:layout_constraintBottom_toTopOf="@+id/tv_invalid2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="parent">
 
         <CheckBox
-            android:id="@+id/cb1Q4"
+            android:id="@+id/cb_q4_rep1"
             android:layout_width="135dp"
             android:layout_height="wrap_content"
             android:text="@string/arc_et_fl_ches" />
 
         <CheckBox
-            android:id="@+id/cb2Q4"
+            android:id="@+id/cb_q4_rep2"
             android:layout_width="138dp"
             android:layout_height="wrap_content"
             android:text="@string/p_e" />
 
         <CheckBox
-            android:id="@+id/cb3Q4"
+            android:id="@+id/cb_q4_rep3"
             android:layout_width="135dp"
             android:layout_height="wrap_content"
             android:text="@string/masse" />
 
         <CheckBox
-            android:id="@+id/cb4Q4"
+            android:id="@+id/cb_q4_rep4"
             android:layout_width="138dp"
             android:layout_height="wrap_content"
             android:text="@string/rapi_re" />
     </RadioGroup>
 
     <TextView
-        android:id="@+id/tx_Invalid2"
+        android:id="@+id/tv_invalid2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/butPage2"
+        android:textColor="#FF0000"
+        app:layout_constraintBottom_toTopOf="@+id/btn_valider2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.144"
         app:layout_constraintStart_toStartOf="parent" />

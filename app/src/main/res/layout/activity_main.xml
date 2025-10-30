@@ -8,110 +8,110 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/txTitre1"
+        android:id="@+id/tv_titre1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/quel_personnage_de_fiction_es_tu"
-        app:layout_constraintBottom_toTopOf="@+id/txQuestion1"
+        app:layout_constraintBottom_toTopOf="@+id/tv_question1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.453" />
 
     <TextView
-        android:id="@+id/txQuestion1"
+        android:id="@+id/tv_question1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="12dp"
         android:text="@string/comment_r_agis_tu_face_un_conflit_tu"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup1"
+        app:layout_constraintBottom_toTopOf="@+id/rg_question1"
         app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup
-        android:id="@+id/radioGroup1"
+        android:id="@+id/rg_question1"
         android:layout_width="320dp"
         android:layout_height="195dp"
         android:layout_marginBottom="36dp"
-        app:layout_constraintBottom_toTopOf="@+id/txQuestion2"
+        app:layout_constraintBottom_toTopOf="@+id/tv_question2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.307"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextSizeCheck">
 
         <RadioButton
-            android:id="@+id/rb1Q1"
+            android:id="@+id/rb_q1_rep1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/je_fuis" />
 
         <RadioButton
-            android:id="@+id/rb2Q1"
+            android:id="@+id/rb_q1_rep2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/je_fonce_dans_le_tas" />
 
         <RadioButton
-            android:id="@+id/rb3Q1"
+            android:id="@+id/rb_q1_rep3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/je_d_samorce_la_situation" />
 
         <RadioButton
-            android:id="@+id/rb4Q1"
+            android:id="@+id/rb_q1_rep4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/j_ignore_la_situation" />
     </RadioGroup>
 
     <TextView
-        android:id="@+id/txQuestion2"
+        android:id="@+id/tv_question2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="4dp"
         android:text="@string/votre_plus_grande_force_c_est"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup2"
+        app:layout_constraintBottom_toTopOf="@+id/rg_question2"
         app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup
-        android:id="@+id/radioGroup2"
+        android:id="@+id/rg_question2"
         android:layout_width="320dp"
         android:layout_height="203dp"
         android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/tx_Invalid1"
+        app:layout_constraintBottom_toTopOf="@+id/tv_invalid"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.307"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextSizeCheck">
 
         <RadioButton
-            android:id="@+id/rb1Q2"
+            android:id="@+id/rb_q2_rep1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/mon_intelligence_et_ma_capacit_d_analyse" />
 
         <RadioButton
-            android:id="@+id/rb2Q2"
+            android:id="@+id/rb_q2_rep2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/ma_loyaut_et_mon_courage" />
 
         <RadioButton
-            android:id="@+id/rb3Q2"
+            android:id="@+id/rb_q2_rep3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/mon_charisme_et_mon_humour" />
 
         <RadioButton
-            android:id="@+id/rb4Q2"
+            android:id="@+id/rb_q2_rep4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/ma_cr_ativit_et_mon_imagination" />
     </RadioGroup>
 
     <Button
-        android:id="@+id/butPage1"
+        android:id="@+id/btn_valider"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="112dp"
@@ -122,25 +122,26 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/but_quitter1"
+        android:id="@+id/btn_quitter"
         android:layout_width="106dp"
-        android:layout_height="47dp"
+        android:layout_height="48dp"
         android:layout_marginStart="76dp"
         android:layout_marginBottom="20dp"
         android:onClick="onExitClick"
         android:text="@string/quitter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/butPage1"
+        app:layout_constraintEnd_toStartOf="@+id/btn_valider"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/tx_Invalid1"
+        android:id="@+id/tv_invalid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginBottom="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/butPage1"
+        android:textColor="#FF0000"
+        app:layout_constraintBottom_toTopOf="@+id/btn_valider"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

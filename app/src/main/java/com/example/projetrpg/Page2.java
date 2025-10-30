@@ -18,9 +18,10 @@ import java.util.ArrayList;
 
 public class Page2 extends AppCompatActivity {
 
-    private RadioGroup radioGroupQ3;
-    private CheckBox cb1Q4, cb2Q4, cb3Q4, cb4Q4;
-    private TextView invalid;
+    // Variables de classe mises à jour
+    private RadioGroup rgQuestion3;
+    private CheckBox cbQ4Rep1, cbQ4Rep2, cbQ4Rep3, cbQ4Rep4;
+    private TextView tvInvalid;
 
     private int resultQ1, resultQ2;
 
@@ -32,6 +33,8 @@ public class Page2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_page2);
+
+        // ID du layout principal mis à jour
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -42,15 +45,15 @@ public class Page2 extends AppCompatActivity {
         resultQ1 = intent.getIntExtra("question 1", -1);
         resultQ2 = intent.getIntExtra("question 2", -1);
 
-        invalid = findViewById(R.id.tx_Invalid2);
-
-        radioGroupQ3 = findViewById(R.id.radioGroup3);
+        // Références aux vues mises à jour
+        tvInvalid = findViewById(R.id.tv_invalid2);
+        rgQuestion3 = findViewById(R.id.rg_question3);
 
         // Initialisation des CheckBox pour la Q4
-        cb1Q4 = findViewById(R.id.cb1Q4);
-        cb2Q4 = findViewById(R.id.cb2Q4);
-        cb3Q4 = findViewById(R.id.cb3Q4);
-        cb4Q4 = findViewById(R.id.cb4Q4);
+        cbQ4Rep1 = findViewById(R.id.cb_q4_rep1);
+        cbQ4Rep2 = findViewById(R.id.cb_q4_rep2);
+        cbQ4Rep3 = findViewById(R.id.cb_q4_rep3);
+        cbQ4Rep4 = findViewById(R.id.cb_q4_rep4);
 
         View.OnClickListener limitListenerQ4 = v -> {
             if (getCheckedCountQ4() > MAX_CHOICES_Q4) {
@@ -58,27 +61,30 @@ public class Page2 extends AppCompatActivity {
                 Toast.makeText(this, "Vous ne pouvez choisir que " + MAX_CHOICES_Q4 + " options.", Toast.LENGTH_SHORT).show();
             }
         };
-        cb1Q4.setOnClickListener(limitListenerQ4);
-        cb2Q4.setOnClickListener(limitListenerQ4);
-        cb3Q4.setOnClickListener(limitListenerQ4);
-        cb4Q4.setOnClickListener(limitListenerQ4);
+        cbQ4Rep1.setOnClickListener(limitListenerQ4);
+        cbQ4Rep2.setOnClickListener(limitListenerQ4);
+        cbQ4Rep3.setOnClickListener(limitListenerQ4);
+        cbQ4Rep4.setOnClickListener(limitListenerQ4);
     }
+
     public void onValiderClick(View view) {
-        boolean isQ3Answered = radioGroupQ3.getCheckedRadioButtonId() != -1;
-        boolean isQ4Answered = isAnyCheckedQ(cb1Q4, cb2Q4, cb3Q4, cb4Q4);
+        // Logique de validation utilisant les variables de classe mises à jour
+        boolean isQ3Answered = rgQuestion3.getCheckedRadioButtonId() != -1;
+        boolean isQ4Answered = isAnyCheckedQ(cbQ4Rep1, cbQ4Rep2, cbQ4Rep3, cbQ4Rep4);
 
         if (!isQ3Answered || !isQ4Answered) {
-            invalid.setText("Veuillez répondre à toutes les questions.");
+            tvInvalid.setText("Veuillez répondre à toutes les questions.");
             return;
         }
 
-        int resultQ3 = radioGroupQ3.getCheckedRadioButtonId();
+        int resultQ3 = rgQuestion3.getCheckedRadioButtonId();
 
+        // Ajout des ID mis à jour à l'ArrayList
         ArrayList<Integer> resultQ4 = new ArrayList<>();
-        if (cb1Q4.isChecked()) resultQ4.add(R.id.cb1Q4);
-        if (cb2Q4.isChecked()) resultQ4.add(R.id.cb2Q4);
-        if (cb3Q4.isChecked()) resultQ4.add(R.id.cb3Q4);
-        if (cb4Q4.isChecked()) resultQ4.add(R.id.cb4Q4);
+        if (cbQ4Rep1.isChecked()) resultQ4.add(R.id.cb_q4_rep1);
+        if (cbQ4Rep2.isChecked()) resultQ4.add(R.id.cb_q4_rep2);
+        if (cbQ4Rep3.isChecked()) resultQ4.add(R.id.cb_q4_rep3);
+        if (cbQ4Rep4.isChecked()) resultQ4.add(R.id.cb_q4_rep4);
 
 
         Intent intent = new Intent(this, Page3.class);
@@ -93,10 +99,10 @@ public class Page2 extends AppCompatActivity {
 
     private int getCheckedCountQ4() {
         int count = 0;
-        if (cb1Q4.isChecked()) count++;
-        if (cb2Q4.isChecked()) count++;
-        if (cb3Q4.isChecked()) count++;
-        if (cb4Q4.isChecked()) count++;
+        if (cbQ4Rep1.isChecked()) count++;
+        if (cbQ4Rep2.isChecked()) count++;
+        if (cbQ4Rep3.isChecked()) count++;
+        if (cbQ4Rep4.isChecked()) count++;
         return count;
     }
 
