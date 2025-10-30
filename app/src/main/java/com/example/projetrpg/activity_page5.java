@@ -75,7 +75,7 @@ public class activity_page5 extends AppCompatActivity {
 
         // --- 7. On prépare l'envoi vers la page de résultats finale ---
         // Remplace ResultatActivity.class par le nom de ta page de résultats
-        Intent intent = new Intent(this, result.class);
+        Intent intent = new Intent(this, Result.class);
 
         // --- 8. On met TOUTES les réponses (anciennes et nouvelles) dans l'Intent ---
         intent.putExtra("question 1", resultQ1);
