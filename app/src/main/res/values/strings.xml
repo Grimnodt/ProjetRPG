@@ -58,5 +58,12 @@
     </string-array>
     <string name="Q10"> Vous trouvez un artefact de pouvoir immense et corrupteur, comme le Péché du réconfort ou Anneau Unique. Que faites vous ?</string>
     <string name="vous_trouvez_un_artefact_de_pouvoir_immense_et_corrupteur_comme_le_p_ch_du_r_confort_ou_l_anneau_unique_que_faites_vous">Vous trouvez un artefact de pouvoir immense et corrupteur, comme le Péché du réconfort ou l\'Anneau Unique. Que faites-vous ?</string>
-
+    <string name="quel_paysage_vous_appelle_le_plus_pour_commencer_votre_aventure">Quel paysage vous appelle le plus pour commencer votre aventure ? 1 (gauche et 2 (droite)</string>
+    <string name="ville_futuriste">Ville futuriste</string>
+    <string name="ville_ancienne">ville ancienne</string>
+    <string name="description_paysage_sombre">Un château sombre et mystérieux sous un ciel orageux.</string>
+    <string name="description_paysage_colore">Une cité fantastique et colorée dans une vallée ensoleillée.</string>
+    <string name="todo">TODO</string>
+    <string name="_2">2</string>
+    <string name="_1">1</string>
 </resources>

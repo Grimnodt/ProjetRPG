@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:contentDescription="@string/todo"
     tools:context=".activity_page5">
 
     <TextView
@@ -32,6 +33,7 @@
         tools:ignore="TextSizeCheck" />
 
     <RadioGroup
+        android:id="@+id/radioGroup5"
         android:layout_width="354dp"
         android:layout_height="201dp"
         android:layout_marginStart="36dp"
@@ -67,5 +69,62 @@
             android:layout_height="wrap_content"
             android:text="@string/ce_pouvoir_est_moi_je_l_utiliserai_pour_atteindre_mes_propres_objectifs"
             tools:ignore="TextSizeCheck" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvQ11"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/quel_paysage_vous_appelle_le_plus_pour_commencer_votre_aventure"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup5"
+        tools:ignore="TextSizeCheck" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="174dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="34dp"
+        android:contentDescription="@string/description_paysage_sombre"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvQ11"
+        app:srcCompat="@drawable/moyen_age_ville" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="110dp"
+        android:layout_height="169dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="36dp"
+        android:contentDescription="@string/description_paysage_colore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvQ11"
+        app:srcCompat="@drawable/ville_future" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="162dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+        <RadioButton
+            android:id="@+id/rb1Q11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_1" />
+
+        <RadioButton
+            android:id="@+id/rb2Q11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_2" />
     </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>
