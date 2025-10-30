@@ -11,14 +11,11 @@
         android:id="@+id/tv_titre2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
         android:text="@string/quel_personnage_de_fiction_es_tu"
         app:layout_constraintBottom_toTopOf="@+id/tv_question3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.453" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_valider2"
@@ -35,21 +32,20 @@
         android:id="@+id/tv_question3"
         android:layout_width="277dp"
         android:layout_height="30dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/choisissez_1_pouvoir_parmi_les_suivants"
+        app:layout_constraintBottom_toTopOf="@+id/rg_question3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.253"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup
         android:id="@+id/rg_question3"
         android:layout_width="180dp"
         android:layout_height="206dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/tv_question4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintHorizontal_bias="0.155"
         app:layout_constraintStart_toStartOf="parent">
 
         <RadioButton
@@ -81,17 +77,18 @@
         android:id="@+id/tv_question4"
         android:layout_width="277dp"
         android:layout_height="30dp"
+        android:layout_marginBottom="24dp"
         android:text="@string/choisissez_les_2_armes_que_vous_pr_f_rez"
         app:layout_constraintBottom_toTopOf="@+id/rg_question4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.268"
+        app:layout_constraintHorizontal_bias="0.253"
         app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup
         android:id="@+id/rg_question4"
         android:layout_width="158dp"
         android:layout_height="206dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toTopOf="@+id/tv_invalid2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.142"

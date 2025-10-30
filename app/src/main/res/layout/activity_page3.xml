@@ -11,25 +11,22 @@
         android:id="@+id/tv_titre3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
         android:text="@string/quel_personnage_de_fiction_es_tu"
         app:layout_constraintBottom_toTopOf="@+id/tv_question_like_form"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.453" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Switch
         android:id="@+id/sw_majeur"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginBottom="48dp"
         android:text="@string/majeur"
+        app:layout_constraintBottom_toTopOf="@+id/tv_question5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_question_like_form"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <Button
@@ -58,51 +55,53 @@
         android:id="@+id/tv_question_like_form"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="131dp"
+        android:layout_marginBottom="24dp"
         android:text="@string/aimez_vous_le_formulaire"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/sw_majeur"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Spinner
         android:id="@+id/sp_question5"
-        android:layout_width="wrap_content"
+        android:layout_width="136dp"
         android:layout_height="48dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_question7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_question5" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv_question5"
         android:layout_width="372dp"
         android:layout_height="36dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginBottom="24dp"
         android:text="@string/si_tu_avais_le_choix_de_sauver_ton_ta_mari_femme_ou_bien_un_village_qui_sauverez_tu"
+        app:layout_constraintBottom_toTopOf="@+id/sp_question5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sw_majeur" />
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv_question7"
         android:layout_width="373dp"
         android:layout_height="38dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginBottom="24dp"
         android:text="@string/une_proph_tie_annonce_votre_destin_e_comment_ragissez_vous"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sp_question5" />
+        app:layout_constraintBottom_toTopOf="@+id/rg_question7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup
         android:id="@+id/rg_question7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="436dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_valider3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_width="304dp"
+        android:layout_height="146dp"
+        android:layout_marginBottom="44dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_invalid3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent">
 
         <RadioButton
             android:id="@+id/rb_q7_rep1"
@@ -118,8 +117,8 @@
 
         <RadioButton
             android:id="@+id/rb_q7_rep3"
-            android:layout_width="299dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
             android:text="@string/je_suis_l_lu_j_accepte_mon_destin_et_je_me_pr_pare_l_accomplir" />
 
     </RadioGroup>

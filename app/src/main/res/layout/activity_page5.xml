@@ -12,37 +12,33 @@
         android:id="@+id/tv_titre5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
         android:text="@string/quel_personnage_de_fiction_es_tu"
-        app:layout_constraintBottom_toTopOf="@id/tv_question10"
+        app:layout_constraintBottom_toTopOf="@+id/tv_question10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.453" />
+        app:layout_constraintVertical_bias="0.41" />
 
     <TextView
         android:id="@+id/tv_question10"
         android:layout_width="341dp"
         android:layout_height="57dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/vous_trouvez_un_artefact_de_pouvoir_immense_et_corrupteur_comme_le_p_ch_du_r_confort_ou_l_anneau_unique_que_faites_vous"
+        app:layout_constraintBottom_toTopOf="@+id/rg_question10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_titre5"
         tools:ignore="TextSizeCheck" />
 
     <RadioGroup
         android:id="@+id/rg_question10"
         android:layout_width="354dp"
         android:layout_height="201dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_question11"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_question10">
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent">
 
         <RadioButton
             android:id="@+id/rb_q10_rep1"
@@ -76,11 +72,12 @@
         android:id="@+id/tv_question11"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/quel_paysage_vous_appelle_le_plus_pour_commencer_votre_aventure"
+        app:layout_constraintBottom_toTopOf="@+id/iv_paysage1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rg_question10"
         tools:ignore="TextSizeCheck" />
 
     <ImageView
@@ -88,21 +85,20 @@
         android:layout_width="174dp"
         android:layout_height="146dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="12dp"
         android:contentDescription="@string/description_paysage_sombre"
+        app:layout_constraintBottom_toTopOf="@+id/rg_question11"
         app:layout_constraintEnd_toStartOf="@+id/iv_paysage2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_question11"
         app:srcCompat="@drawable/moyen_age_ville" />
 
     <ImageView
         android:id="@+id/iv_paysage2"
-        android:layout_width="110dp"
-        android:layout_height="169dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="36dp"
+        android:layout_width="114dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
         android:contentDescription="@string/description_paysage_colore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_question11"
@@ -110,12 +106,12 @@
 
     <RadioGroup
         android:id="@+id/rg_question11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="162dp"
-        app:layout_constraintEnd_toStartOf="@+id/iv_paysage2"
-        app:layout_constraintTop_toBottomOf="@+id/iv_paysage1">
+        android:layout_width="55dp"
+        android:layout_height="99dp"
+        android:layout_marginEnd="250dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_valider5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <RadioButton
             android:id="@+id/rb_q11_rep1"
@@ -134,22 +130,22 @@
         android:id="@+id/tv_invalid5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="28dp"
         android:text=""
         android:textColor="@android:color/holo_red_dark"
         app:layout_constraintBottom_toTopOf="@+id/btn_valider5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_valider5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginBottom="16dp"
         android:onClick="onValiderClick"
         android:text="@string/valider"
-        app:layout_constraintStart_toEndOf="@+id/rg_question11"
-        app:layout_constraintTop_toBottomOf="@+id/iv_paysage2" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
