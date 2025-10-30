@@ -108,6 +108,7 @@
         app:srcCompat="@drawable/ville_future" />
 
     <RadioGroup
+        android:id="@+id/radioGroup6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
@@ -127,4 +128,25 @@
             android:layout_height="wrap_content"
             android:text="@string/_2" />
     </RadioGroup>
+
+    <TextView
+        android:id="@+id/tx_Invalid5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text=""
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toTopOf="@+id/btp5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btp5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/valider"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup6"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
