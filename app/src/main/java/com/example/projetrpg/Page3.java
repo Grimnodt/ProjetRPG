@@ -1,6 +1,7 @@
 package com.example.projetrpg;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -17,10 +18,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Page3 extends AppCompatActivity {
 
-    // 1. Variable pour le sac-à-dos
     private ReponsesQuiz reponses;
-
-    // Vues de la page
     private Switch swMajeur;
     private TextView tvInvalid;
     private Spinner spQuestion5;
@@ -32,27 +30,29 @@ public class Page3 extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_page3);
 
-        // Correction de l'ID du layout principal
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.cl_main_page3), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        // 2. RECEVOIR le sac
         Intent intent = getIntent();
-        reponses = intent.getParcelableExtra(ReponsesQuiz.KEY);
-        if (reponses == null) {
-            reponses = new ReponsesQuiz(); // Sécurité
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            reponses = intent.getParcelableExtra(ReponsesQuiz.KEY, ReponsesQuiz.class);
+        } else {
+            reponses = intent.getParcelableExtra(ReponsesQuiz.KEY);
         }
 
-        // Initialisation des vues
+        if (reponses == null) {
+            reponses = new ReponsesQuiz();
+        }
+
         tvInvalid = findViewById(R.id.tv_invalid3);
         swMajeur = findViewById(R.id.sw_majeur);
         spQuestion5 = findViewById(R.id.sp_question5);
         rgQuestion7 = findViewById(R.id.rg_question7);
 
-        // Configuration du Spinner
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this,
                 R.array.liste_de_mots,
@@ -63,10 +63,8 @@ public class Page3 extends AppCompatActivity {
     }
 
     public void onValiderClick(View view) {
-
         int resultQ7 = rgQuestion7.getCheckedRadioButtonId();
 
-        // Validation des questions
         if (!swMajeur.isChecked()) {
             tvInvalid.setText("Veuillez cocher que le formulaire vous plaît. Merci. ");
             return;
@@ -75,18 +73,15 @@ public class Page3 extends AppCompatActivity {
             tvInvalid.setText("Veuillez répondre à la question sur la prophétie.");
             return;
         }
-        tvInvalid.setText(""); // Effacer l'erreur
+        tvInvalid.setText("");
 
-        // Récupération des réponses de la page
         String motChoisi = spQuestion5.getSelectedItem().toString();
         boolean estMajeur = swMajeur.isChecked();
 
-        // 3. AJOUTER les réponses au sac
         reponses.setReponseMajeur(estMajeur);
         reponses.setReponseQ5(motChoisi);
         reponses.setReponseQ7(resultQ7);
 
-        // 4. REPASSER le sac MIS À JOUR
         Intent intent = new Intent(this, P4.class);
         intent.putExtra(ReponsesQuiz.KEY, reponses);
         startActivity(intent);

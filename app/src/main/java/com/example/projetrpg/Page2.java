@@ -1,6 +1,7 @@
 package com.example.projetrpg;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
@@ -21,10 +22,7 @@ public class Page2 extends AppCompatActivity {
     private RadioGroup rgQuestion3;
     private CheckBox cbQ4Rep1, cbQ4Rep2, cbQ4Rep3, cbQ4Rep4;
     private TextView tvInvalid;
-
-    // 1. Variable pour le sac-à-dos
     private ReponsesQuiz reponses;
-
     private static final int MAX_CHOICES_Q4 = 2;
 
     @Override
@@ -33,21 +31,24 @@ public class Page2 extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_page2);
 
-        // Correction de l'ID du layout principal
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.cl_main_page2), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        // 2. RECEVOIR le sac
         Intent intent = getIntent();
-        reponses = intent.getParcelableExtra(ReponsesQuiz.KEY);
-        if (reponses == null) {
-            reponses = new ReponsesQuiz(); // Sécurité
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            reponses = intent.getParcelableExtra(ReponsesQuiz.KEY, ReponsesQuiz.class);
+        } else {
+            reponses = intent.getParcelableExtra(ReponsesQuiz.KEY);
         }
 
-        // Initialisation des vues
+        if (reponses == null) {
+            reponses = new ReponsesQuiz();
+        }
+
         tvInvalid = findViewById(R.id.tv_invalid2);
         rgQuestion3 = findViewById(R.id.rg_question3);
 
@@ -84,11 +85,9 @@ public class Page2 extends AppCompatActivity {
         if (cbQ4Rep3.isChecked()) resultQ4.add(R.id.cb_q4_rep3);
         if (cbQ4Rep4.isChecked()) resultQ4.add(R.id.cb_q4_rep4);
 
-        // 3. AJOUTER les réponses au sac
         reponses.setReponseQ3(resultQ3);
         reponses.setReponseQ4(resultQ4);
 
-        // 4. REPASSER le sac MIS À JOUR
         Intent intent = new Intent(this, Page3.class);
         intent.putExtra(ReponsesQuiz.KEY, reponses);
         startActivity(intent);

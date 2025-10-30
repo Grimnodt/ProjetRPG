@@ -12,10 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetRPG">
         <activity
-            android:name=".ReponsesQuiz"
-            android:exported="false" />
-        <activity
-            android:name=".result"
+            android:name=".Result"
             android:exported="false" />
         <activity
             android:name=".P4"
@@ -36,7 +33,7 @@
             android:name=".Page2"
             android:exported="false" />
         <activity
-            android:name=".activity_page5"
+            android:name=".Activity_page5"
             android:exported="false" />
     </application>
 

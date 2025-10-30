@@ -2,6 +2,7 @@ package com.example.projetrpg;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioGroup;
@@ -15,15 +16,10 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Activity_page5 extends AppCompatActivity {
 
-    // 1. Variable pour le sac-à-dos
     private ReponsesQuiz reponses;
-
-    // Vues de la page
     private TextView tvInvalid;
     private RadioGroup rgQuestion10;
     private RadioGroup rgQuestion11;
-
-    // Plus besoin des variables pour les Q1, Q2, Q3...
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -32,21 +28,24 @@ public class Activity_page5 extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_page5);
 
-        // Correction de l'ID du layout principal
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.cl_main_page5), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        // 2. RECEVOIR le sac
         Intent intent = getIntent();
-        reponses = intent.getParcelableExtra(ReponsesQuiz.KEY);
-        if (reponses == null) {
-            reponses = new ReponsesQuiz(); // Sécurité
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            reponses = intent.getParcelableExtra(ReponsesQuiz.KEY, ReponsesQuiz.class);
+        } else {
+            reponses = intent.getParcelableExtra(ReponsesQuiz.KEY);
         }
 
-        // Initialisation des vues
+        if (reponses == null) {
+            reponses = new ReponsesQuiz();
+        }
+
         tvInvalid = findViewById(R.id.tv_invalid5);
         rgQuestion10 = findViewById(R.id.rg_question10);
         rgQuestion11 = findViewById(R.id.rg_question11);
@@ -61,13 +60,11 @@ public class Activity_page5 extends AppCompatActivity {
             tvInvalid.setText("Veuillez répondre à toutes les questions.");
             return;
         }
-        tvInvalid.setText(""); // Effacer l'erreur
+        tvInvalid.setText("");
 
-        // 3. AJOUTER les dernières réponses au sac
         reponses.setReponseQ10(resultQ10);
         reponses.setReponseQ11(resultQ11);
 
-        // 4. ENVOYER le sac FINAL à la page de Résultat
         Intent intent = new Intent(this, Result.class);
         intent.putExtra(ReponsesQuiz.KEY, reponses);
         startActivity(intent);

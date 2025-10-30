@@ -20,8 +20,7 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        // Correction de l'ID du layout principal
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.cl_main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
@@ -41,14 +40,10 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        // 1. CRÉER le sac-à-dos
         ReponsesQuiz reponses = new ReponsesQuiz();
-
-        // 2. AJOUTER les réponses de la page 1
         reponses.setReponseQ1(resultQ1);
         reponses.setReponseQ2(resultQ2);
 
-        // 3. PASSER le sac à la page 2
         Intent intent = new Intent(this, Page2.class);
         intent.putExtra(ReponsesQuiz.KEY, reponses);
         startActivity(intent);
