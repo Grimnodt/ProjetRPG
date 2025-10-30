@@ -2,6 +2,7 @@ package com.example.projetrpg;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View; // Import nécessaire
 import android.widget.TextView;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -57,5 +58,9 @@ public class Result extends AppCompatActivity {
         }
 
         return "Un aventurier";
+    }
+
+    public void onQuitterClick(View view) {
+        finishAffinity();
     }
 }
