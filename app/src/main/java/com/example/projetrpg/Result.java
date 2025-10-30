@@ -31,7 +31,7 @@ public class Result extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             reponses = getIntent().getParcelableExtra(ReponsesQuiz.KEY, ReponsesQuiz.class);
         } else {
-            reponses = getIntent().getParcelableExtra(ReponsesQuiz.KEY);
+            reponses = getIntent().getParcelableExtra(ReponsesQuiz.KEY); // LE ELSE EST DEPRECATED, ON EST SUR API 36 DONC C'EST NORMAL, ON RENTRE PAS DANS LE ELSE QUAND CA MARCHE.
         }
 
         if (reponses != null) {

@@ -41,7 +41,7 @@ public class Page3 extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             reponses = intent.getParcelableExtra(ReponsesQuiz.KEY, ReponsesQuiz.class);
         } else {
-            reponses = intent.getParcelableExtra(ReponsesQuiz.KEY);
+            reponses = intent.getParcelableExtra(ReponsesQuiz.KEY); // LE ELSE EST DEPRECATED, ON EST SUR API 36 DONC C'EST NORMAL, ON RENTRE PAS DANS LE ELSE QUAND CA MARCHE.
         }
 
         if (reponses == null) {
