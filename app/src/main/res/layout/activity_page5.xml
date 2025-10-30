@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:contentDescription="@string/todo"
-    tools:context=".activity_page5">
+    tools:context=".Activity_page5">
 
     <TextView
         android:id="@+id/txTitre3"
