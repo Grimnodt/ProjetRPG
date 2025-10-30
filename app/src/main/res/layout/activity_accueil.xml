@@ -37,6 +37,7 @@
         android:layout_marginBottom="236dp"
         android:onClick="onQuitterClick"
         android:text="@string/quitter"
+        android:backgroundTint="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -47,7 +48,7 @@
         android:layout_height="wrap_content"
         android:text="@string/kael_lissarrague_et_gr_goire_devoucoux"
         android:textColor="@android:color/holo_blue_dark"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tv_accueil_titre"
         app:layout_constraintEnd_toEndOf="parent"
