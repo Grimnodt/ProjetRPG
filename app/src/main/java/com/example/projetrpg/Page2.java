@@ -18,14 +18,12 @@ import java.util.ArrayList;
 
 public class Page2 extends AppCompatActivity {
 
-    // Variables de classe mises à jour
     private RadioGroup rgQuestion3;
     private CheckBox cbQ4Rep1, cbQ4Rep2, cbQ4Rep3, cbQ4Rep4;
     private TextView tvInvalid;
 
     private int resultQ1, resultQ2;
 
-    // Constante pour limiter le choix de la Q4
     private static final int MAX_CHOICES_Q4 = 2;
 
     @Override
@@ -34,7 +32,6 @@ public class Page2 extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_page2);
 
-        // ID du layout principal mis à jour
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -45,11 +42,9 @@ public class Page2 extends AppCompatActivity {
         resultQ1 = intent.getIntExtra("question 1", -1);
         resultQ2 = intent.getIntExtra("question 2", -1);
 
-        // Références aux vues mises à jour
         tvInvalid = findViewById(R.id.tv_invalid2);
         rgQuestion3 = findViewById(R.id.rg_question3);
 
-        // Initialisation des CheckBox pour la Q4
         cbQ4Rep1 = findViewById(R.id.cb_q4_rep1);
         cbQ4Rep2 = findViewById(R.id.cb_q4_rep2);
         cbQ4Rep3 = findViewById(R.id.cb_q4_rep3);
@@ -68,7 +63,6 @@ public class Page2 extends AppCompatActivity {
     }
 
     public void onValiderClick(View view) {
-        // Logique de validation utilisant les variables de classe mises à jour
         boolean isQ3Answered = rgQuestion3.getCheckedRadioButtonId() != -1;
         boolean isQ4Answered = isAnyCheckedQ(cbQ4Rep1, cbQ4Rep2, cbQ4Rep3, cbQ4Rep4);
 
@@ -79,7 +73,6 @@ public class Page2 extends AppCompatActivity {
 
         int resultQ3 = rgQuestion3.getCheckedRadioButtonId();
 
-        // Ajout des ID mis à jour à l'ArrayList
         ArrayList<Integer> resultQ4 = new ArrayList<>();
         if (cbQ4Rep1.isChecked()) resultQ4.add(R.id.cb_q4_rep1);
         if (cbQ4Rep2.isChecked()) resultQ4.add(R.id.cb_q4_rep2);
