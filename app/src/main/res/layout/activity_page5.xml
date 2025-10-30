@@ -23,7 +23,7 @@
         android:id="@+id/tv_question10"
         android:layout_width="341dp"
         android:layout_height="57dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/vous_trouvez_un_artefact_de_pouvoir_immense_et_corrupteur_comme_le_p_ch_du_r_confort_ou_l_anneau_unique_que_faites_vous"
         app:layout_constraintBottom_toTopOf="@+id/rg_question10"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,10 +34,10 @@
         android:id="@+id/rg_question10"
         android:layout_width="354dp"
         android:layout_height="201dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="44dp"
         app:layout_constraintBottom_toTopOf="@+id/tv_question11"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent">
 
         <RadioButton
