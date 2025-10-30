@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        // Correction de l'ID du layout principal
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -35,14 +36,21 @@ public class MainActivity extends AppCompatActivity {
         int resultQ1 = rgQuestion1.getCheckedRadioButtonId();
         int resultQ2 = rgQuestion2.getCheckedRadioButtonId();
 
-        if (rgQuestion1.getCheckedRadioButtonId() == -1 || rgQuestion2.getCheckedRadioButtonId() == -1){
+        if (resultQ1 == -1 || resultQ2 == -1){
             tvInvalid.setText("Une question n'a pas été répondu");
             return;
         }
 
+        // 1. CRÉER le sac-à-dos
+        ReponsesQuiz reponses = new ReponsesQuiz();
+
+        // 2. AJOUTER les réponses de la page 1
+        reponses.setReponseQ1(resultQ1);
+        reponses.setReponseQ2(resultQ2);
+
+        // 3. PASSER le sac à la page 2
         Intent intent = new Intent(this, Page2.class);
-        intent.putExtra("question 1", resultQ1);
-        intent.putExtra("question 2", resultQ2);
+        intent.putExtra(ReponsesQuiz.KEY, reponses);
         startActivity(intent);
     }
 

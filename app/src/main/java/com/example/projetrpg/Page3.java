@@ -3,10 +3,11 @@ package com.example.projetrpg;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Switch; // Reste Switch, mais la variable change
-import android.widget.TextView;
 import android.widget.ArrayAdapter;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.Switch;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,17 +15,16 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import java.util.ArrayList;
-
 public class Page3 extends AppCompatActivity {
 
-    private int resultQ1, resultQ2, resultQ3;
-    private ArrayList<Integer> resultQ4;
+    // 1. Variable pour le sac-à-dos
+    private ReponsesQuiz reponses;
 
+    // Vues de la page
     private Switch swMajeur;
     private TextView tvInvalid;
     private Spinner spQuestion5;
-
+    private RadioGroup rgQuestion7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,22 +32,27 @@ public class Page3 extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_page3);
 
+        // Correction de l'ID du layout principal
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
+        // 2. RECEVOIR le sac
+        Intent intent = getIntent();
+        reponses = intent.getParcelableExtra(ReponsesQuiz.KEY);
+        if (reponses == null) {
+            reponses = new ReponsesQuiz(); // Sécurité
+        }
+
+        // Initialisation des vues
         tvInvalid = findViewById(R.id.tv_invalid3);
         swMajeur = findViewById(R.id.sw_majeur);
-
-        Intent intent = getIntent();
-        resultQ1 = intent.getIntExtra("question 1", -1);
-        resultQ2 = intent.getIntExtra("question 2", -1);
-        resultQ3 = intent.getIntExtra("question 3", -1);
-        resultQ4 = intent.getIntegerArrayListExtra("question 4");
-
         spQuestion5 = findViewById(R.id.sp_question5);
+        rgQuestion7 = findViewById(R.id.rg_question7);
+
+        // Configuration du Spinner
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this,
                 R.array.liste_de_mots,
@@ -58,21 +63,32 @@ public class Page3 extends AppCompatActivity {
     }
 
     public void onValiderClick(View view) {
+
+        int resultQ7 = rgQuestion7.getCheckedRadioButtonId();
+
+        // Validation des questions
         if (!swMajeur.isChecked()) {
             tvInvalid.setText("Veuillez cocher que le formulaire vous plaît. Merci. ");
             return;
         }
+        if (resultQ7 == -1) {
+            tvInvalid.setText("Veuillez répondre à la question sur la prophétie.");
+            return;
+        }
+        tvInvalid.setText(""); // Effacer l'erreur
 
+        // Récupération des réponses de la page
         String motChoisi = spQuestion5.getSelectedItem().toString();
+        boolean estMajeur = swMajeur.isChecked();
 
+        // 3. AJOUTER les réponses au sac
+        reponses.setReponseMajeur(estMajeur);
+        reponses.setReponseQ5(motChoisi);
+        reponses.setReponseQ7(resultQ7);
+
+        // 4. REPASSER le sac MIS À JOUR
         Intent intent = new Intent(this, P4.class);
-
-        intent.putExtra("question 1", resultQ1);
-        intent.putExtra("question 2", resultQ2);
-        intent.putExtra("question 3", resultQ3);
-        intent.putIntegerArrayListExtra("question 4", resultQ4);
-        intent.putExtra("question_mot_choisi", motChoisi);
-
+        intent.putExtra(ReponsesQuiz.KEY, reponses);
         startActivity(intent);
     }
 }

@@ -22,7 +22,8 @@ public class Page2 extends AppCompatActivity {
     private CheckBox cbQ4Rep1, cbQ4Rep2, cbQ4Rep3, cbQ4Rep4;
     private TextView tvInvalid;
 
-    private int resultQ1, resultQ2;
+    // 1. Variable pour le sac-à-dos
+    private ReponsesQuiz reponses;
 
     private static final int MAX_CHOICES_Q4 = 2;
 
@@ -32,16 +33,21 @@ public class Page2 extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_page2);
 
+        // Correction de l'ID du layout principal
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
+        // 2. RECEVOIR le sac
         Intent intent = getIntent();
-        resultQ1 = intent.getIntExtra("question 1", -1);
-        resultQ2 = intent.getIntExtra("question 2", -1);
+        reponses = intent.getParcelableExtra(ReponsesQuiz.KEY);
+        if (reponses == null) {
+            reponses = new ReponsesQuiz(); // Sécurité
+        }
 
+        // Initialisation des vues
         tvInvalid = findViewById(R.id.tv_invalid2);
         rgQuestion3 = findViewById(R.id.rg_question3);
 
@@ -72,21 +78,19 @@ public class Page2 extends AppCompatActivity {
         }
 
         int resultQ3 = rgQuestion3.getCheckedRadioButtonId();
-
         ArrayList<Integer> resultQ4 = new ArrayList<>();
         if (cbQ4Rep1.isChecked()) resultQ4.add(R.id.cb_q4_rep1);
         if (cbQ4Rep2.isChecked()) resultQ4.add(R.id.cb_q4_rep2);
         if (cbQ4Rep3.isChecked()) resultQ4.add(R.id.cb_q4_rep3);
         if (cbQ4Rep4.isChecked()) resultQ4.add(R.id.cb_q4_rep4);
 
+        // 3. AJOUTER les réponses au sac
+        reponses.setReponseQ3(resultQ3);
+        reponses.setReponseQ4(resultQ4);
 
+        // 4. REPASSER le sac MIS À JOUR
         Intent intent = new Intent(this, Page3.class);
-
-        intent.putExtra("question 1", resultQ1);
-        intent.putExtra("question 2", resultQ2);
-        intent.putExtra("question 3", resultQ3);
-        intent.putIntegerArrayListExtra("question 4", resultQ4);
-
+        intent.putExtra(ReponsesQuiz.KEY, reponses);
         startActivity(intent);
     }
 
