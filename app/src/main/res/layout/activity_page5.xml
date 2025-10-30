@@ -25,9 +25,10 @@
         android:id="@+id/tvQ10"
         android:layout_width="341dp"
         android:layout_height="57dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="12dp"
         android:text="@string/vous_trouvez_un_artefact_de_pouvoir_immense_et_corrupteur_comme_le_p_ch_du_r_confort_ou_l_anneau_unique_que_faites_vous"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txTitre3"
         tools:ignore="TextSizeCheck" />
@@ -144,8 +145,8 @@
         android:id="@+id/btp5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="52dp"
         android:text="@string/valider"
         app:layout_constraintStart_toEndOf="@+id/radioGroup6"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
