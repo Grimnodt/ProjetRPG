@@ -12,10 +12,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/quel_personnage_de_fiction_es_tu"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tv_question3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.313" />
 
     <Button
         android:id="@+id/btn_valider2"
@@ -32,20 +34,22 @@
         android:id="@+id/tv_question3"
         android:layout_width="277dp"
         android:layout_height="30dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="4dp"
         android:text="@string/choisissez_1_pouvoir_parmi_les_suivants"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/rg_question3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup
         android:id="@+id/rg_question3"
         android:layout_width="192dp"
         android:layout_height="275dp"
-        android:layout_marginBottom="61dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/rg_question4"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent">
 
         <RadioButton
@@ -77,11 +81,12 @@
         android:id="@+id/tv_question4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"
         android:text="@string/choisissez_les_2_armes_que_vous_pr_f_rez"
         app:layout_constraintBottom_toTopOf="@+id/rg_question4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.822"
+        app:layout_constraintHorizontal_bias="0.824"
         app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup

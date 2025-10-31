@@ -11,6 +11,7 @@
         android:id="@+id/tv_titre2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:text="@string/quel_personnage_de_fiction_es_tu"
         app:layout_constraintBottom_toTopOf="@+id/tv_question3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,9 +34,11 @@
         android:layout_width="277dp"
         android:layout_height="30dp"
         android:layout_marginBottom="20dp"
+        android:textStyle="bold"
         android:text="@string/choisissez_1_pouvoir_parmi_les_suivants"
         app:layout_constraintBottom_toTopOf="@+id/rg_question3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.283"
         app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup
@@ -78,6 +81,7 @@
         android:layout_width="277dp"
         android:layout_height="30dp"
         android:layout_marginBottom="24dp"
+        android:textStyle="bold"
         android:text="@string/choisissez_les_2_armes_que_vous_pr_f_rez"
         app:layout_constraintBottom_toTopOf="@+id/rg_question4"
         app:layout_constraintEnd_toEndOf="parent"

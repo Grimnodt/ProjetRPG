@@ -11,6 +11,7 @@
         android:id="@+id/tv_titre1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:text="@string/quel_personnage_de_fiction_es_tu"
         app:layout_constraintBottom_toTopOf="@+id/tv_question1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="12dp"
+        android:textStyle="bold"
         android:text="@string/comment_r_agis_tu_face_un_conflit_tu"
         app:layout_constraintBottom_toTopOf="@+id/rg_question1"
         app:layout_constraintStart_toStartOf="parent" />
@@ -70,6 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="504dp"
         android:layout_marginBottom="20dp"
+        android:textStyle="bold"
         android:text="@string/votre_plus_grande_force_c_est"
         app:layout_constraintBottom_toTopOf="@+id/rg_question2"
         app:layout_constraintStart_toStartOf="parent" />
@@ -78,7 +81,7 @@
         android:id="@+id/rg_question2"
         android:layout_width="320dp"
         android:layout_height="203dp"
-        android:layout_marginBottom="59dp"
+        android:layout_marginBottom="44dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_valider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
