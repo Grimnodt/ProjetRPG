@@ -49,4 +49,18 @@
     <string name="je_tente_de_l_utiliser_pour_faire_le_bien_malgr_les_risques">I try to use it for good, despite the risks.</string>
     <string name="ce_pouvoir_est_moi_je_l_utiliserai_pour_atteindre_mes_propres_objectifs">This power is mine. I will use it to achieve my own goals.</string>
     <string name="Q10">You find an artifact of immense and corrupting power, like the Sin of Comfort or the One Ring. What do you do?</string>
+    <string name="ville_futuriste">Futuristic city</string>
+    <string name="ville_ancienne">Old city</string>
+    <string name="vous_trouvez_un_artefact_de_pouvoir_immense_et_corrupteur_comme_le_p_ch_du_r_confort_ou_l_anneau_unique_que_faites_vous">You find an artifact of immense and corrupting power, like the Sin of Comfort or the One Ring. What do you do?</string>
+    <string name="quel_paysage_vous_appelle_le_plus_pour_commencer_votre_aventure">Which landscape calls to you the most to start your adventure? 1 (left) and 2 (right)</string>
+    <string name="description_paysage_sombre">A dark and mysterious castle under a stormy sky.</string>
+    <string name="description_paysage_colore">A fantastic and colorful city in a sunny valley.</string>
+    <string name="todo">TODO</string>
+    <string name="_2">2</string>
+    <string name="_1">1</string>
+    <string name="calcul_des_r_sultats">Calculating results...</string>
+    <string name="accueil_titre">home_title</string>
+    <string name="demarrer">Start</string>
+    <string name="r_pond_nos_questions_et_d_couvre_ton_personnage_de_fiction">Answer our questions and discover your fictional character!</string>
+    <string name="kael_lissarrague_et_gr_goire_devoucoux">Kael LISSARRAGUE and Grégoire DEVOUCOUX</string>
 </resources>
