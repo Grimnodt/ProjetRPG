@@ -7,23 +7,11 @@
     android:layout_height="match_parent"
     tools:context=".Accueil">
 
-    <TextView
-        android:id="@+id/tv_accueil_titre"
-        android:layout_width="347dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="84dp"
-        android:text="@string/r_pond_nos_questions_et_d_couvre_ton_personnage_de_fiction"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_demarrer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <Button
         android:id="@+id/btn_demarrer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="8dp"
         android:onClick="onDemarrerClick"
         android:text="@string/demarrer"
         app:layout_constraintBottom_toTopOf="@+id/btn_quitter_accueil"
@@ -34,10 +22,10 @@
         android:id="@+id/btn_quitter_accueil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="236dp"
+        android:layout_marginBottom="48dp"
+        android:backgroundTint="@android:color/holo_red_dark"
         android:onClick="onQuitterClick"
         android:text="@string/quitter"
-        android:backgroundTint="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -53,6 +41,19 @@
         app:layout_constraintBottom_toTopOf="@+id/tv_accueil_titre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.44" />
+
+    <TextView
+        android:id="@+id/tv_accueil_titre"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="88dp"
+        android:text="@string/r_pond_nos_questions_et_d_couvre_ton_personnage_de_fiction"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_demarrer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

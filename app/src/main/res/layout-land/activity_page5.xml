@@ -23,10 +23,11 @@
         android:id="@+id/tv_question10"
         android:layout_width="341dp"
         android:layout_height="57dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="12dp"
         android:text="@string/vous_trouvez_un_artefact_de_pouvoir_immense_et_corrupteur_comme_le_p_ch_du_r_confort_ou_l_anneau_unique_que_faites_vous"
         app:layout_constraintBottom_toTopOf="@+id/rg_question10"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextSizeCheck" />
 
@@ -34,10 +35,10 @@
         android:id="@+id/rg_question10"
         android:layout_width="354dp"
         android:layout_height="201dp"
-        android:layout_marginBottom="44dp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_question11"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_invalid5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent">
 
         <RadioButton
@@ -72,11 +73,11 @@
         android:id="@+id/tv_question11"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/quel_paysage_vous_appelle_le_plus_pour_commencer_votre_aventure"
         app:layout_constraintBottom_toTopOf="@+id/iv_paysage1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintHorizontal_bias="0.961"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextSizeCheck" />
 
@@ -85,11 +86,11 @@
         android:layout_width="174dp"
         android:layout_height="146dp"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="4dp"
         android:contentDescription="@string/description_paysage_sombre"
         app:layout_constraintBottom_toTopOf="@+id/rg_question11"
         app:layout_constraintEnd_toStartOf="@+id/iv_paysage2"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.969"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/moyen_age_ville" />
 
@@ -98,31 +99,34 @@
         android:layout_width="114dp"
         android:layout_height="152dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="28dp"
+        android:layout_marginEnd="36dp"
         android:contentDescription="@string/description_paysage_colore"
+        app:layout_constraintBottom_toTopOf="@+id/rg_question11"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_question11"
         app:srcCompat="@drawable/ville_future" />
 
     <RadioGroup
         android:id="@+id/rg_question11"
-        android:layout_width="55dp"
-        android:layout_height="99dp"
-        android:layout_marginEnd="250dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_valider5"
+        android:layout_width="103dp"
+        android:layout_height="110dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent">
 
         <RadioButton
             android:id="@+id/rb_q11_rep1"
-            android:layout_width="match_parent"
+            android:layout_width="76dp"
             android:layout_height="wrap_content"
             android:text="@string/_1" />
 
         <RadioButton
             android:id="@+id/rb_q11_rep2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="78dp"
+            android:layout_height="48dp"
             android:text="@string/_2" />
     </RadioGroup>
 
@@ -133,9 +137,9 @@
         android:layout_marginBottom="28dp"
         android:text=""
         android:textColor="@android:color/holo_red_dark"
-        app:layout_constraintBottom_toTopOf="@+id/btn_valider5"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.102"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -147,5 +151,6 @@
         android:text="@string/valider"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.619"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
