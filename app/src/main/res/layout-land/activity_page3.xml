@@ -12,22 +12,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/quel_personnage_de_fiction_es_tu"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tv_question_like_form"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.418" />
 
     <Switch
         android:id="@+id/sw_majeur"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="44dp"
         android:text="@string/majeur"
         app:layout_constraintBottom_toTopOf="@+id/tv_question5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/tv_question_like_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/aimez_vous_le_formulaire"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/sw_majeur"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_valider3"
@@ -44,54 +58,45 @@
         android:id="@+id/tv_invalid3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="36dp"
         android:textColor="#FF0000"
-        app:layout_constraintBottom_toTopOf="@+id/btn_valider3"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.077"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_question_like_form"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="@string/aimez_vous_le_formulaire"
-        app:layout_constraintBottom_toTopOf="@+id/sw_majeur"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Spinner
         android:id="@+id/sp_question5"
         android:layout_width="136dp"
         android:layout_height="48dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_invalid3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.121"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_question5" />
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv_question5"
         android:layout_width="320dp"
         android:layout_height="41dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="24dp"
         android:text="@string/si_tu_avais_le_choix_de_sauver_ton_ta_mari_femme_ou_bien_un_village_qui_sauverez_tu"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/sp_question5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintHorizontal_bias="0.087"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv_question7"
-        android:layout_width="373dp"
-        android:layout_height="38dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="342dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="24dp"
         android:text="@string/une_proph_tie_annonce_votre_destin_e_comment_ragissez_vous"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/rg_question7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.961"
         app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup
@@ -101,7 +106,7 @@
         android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_valider3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintHorizontal_bias="0.959"
         app:layout_constraintStart_toStartOf="parent">
 
         <RadioButton
@@ -118,7 +123,7 @@
 
         <RadioButton
             android:id="@+id/rb_q7_rep3"
-            android:layout_width="match_parent"
+            android:layout_width="301dp"
             android:layout_height="48dp"
             android:text="@string/je_suis_l_lu_j_accepte_mon_destin_et_je_me_pr_pare_l_accomplir" />
 
