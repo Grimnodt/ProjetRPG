@@ -3,7 +3,7 @@ package com.example.projetrpg;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.ImageView; // Import nécessaire
 import android.widget.TextView;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +15,7 @@ public class Result extends AppCompatActivity {
 
     private ReponsesQuiz reponses;
     private TextView tvResultatFinal;
-    private TextView tvPersonnage;
+    private TextView tvPersonnageNom;
     private ImageView ivResultatImage;
 
     @Override
@@ -31,7 +31,7 @@ public class Result extends AppCompatActivity {
         });
 
         tvResultatFinal = findViewById(R.id.tv_resultat_final);
-        tvPersonnage = findViewById(R.id.tv_personnage);
+        tvPersonnageNom = findViewById(R.id.tv_personnage_nom);
         ivResultatImage = findViewById(R.id.imageView);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
@@ -42,54 +42,51 @@ public class Result extends AppCompatActivity {
 
         if (reponses != null) {
             String personnage = analyserReponses(reponses);
-            tvPersonnage.setText(personnage + " !");
+
+            tvResultatFinal.setText("Vous êtes...");
+            tvPersonnageNom.setText(personnage + " !");
+
             afficherImagePersonnage(personnage);
+
         } else {
-            tvPersonnage.setText("Erreur: Impossible de charger les résultats.");
+            tvResultatFinal.setText("Erreur: Impossible de charger les résultats.");
+            tvPersonnageNom.setText("");
         }
     }
 
     private String analyserReponses(ReponsesQuiz r) {
-        if (r.getReponseQ11() == R.id.rb_q11_rep2) {
-            return "V (Cyberpunk)";
-        }
-
-        if (r.getReponseQ3() == R.id.rb_q3_rep2) {
-            return "Flash";
-        }
 
         if (r.getReponseQ8() == R.id.rb_q8_rep5) {
             return "Muzan Kibutsuji";
         }
-
-        if (r.getReponseQ10() == R.id.rb_q10_rep4 && r.getReponseQ2() == R.id.rb_q2_rep3) {
-            return "Griffith";
-        }
-
-        if (r.getReponseQ10() == R.id.rb_q10_rep4 && r.getReponseQ2() == R.id.rb_q2_rep1) {
-            return "Sauron";
-        }
-
-        if (r.getReponseQ10() == R.id.rb_q10_rep4) {
-            return "Joker";
-        }
-
         if (r.getReponseQ2() == R.id.rb_q2_rep1 && r.getReponseQ10() == R.id.rb_q10_rep1) {
             return "Batman";
         }
-
-        if (r.getReponseQ1() == R.id.rb_q1_rep2 && r.getReponseQ7() == R.id.rb_q7_rep2) {
+        if (r.getReponseQ1() == R.id.rb_q1_rep2) {
             return "Kratos";
         }
-
+        if (r.getReponseQ11() == R.id.rb_q11_rep2) {
+            return "V (Cyberpunk)";
+        }
+        if (r.getReponseQ3() == R.id.rb_q3_rep2) {
+            return "Flash";
+        }
+        if (r.getReponseQ10() == R.id.rb_q10_rep4 && r.getReponseQ2() == R.id.rb_q2_rep3) {
+            return "Griffith";
+        }
+        if (r.getReponseQ10() == R.id.rb_q10_rep4 && r.getReponseQ2() == R.id.rb_q2_rep1) {
+            return "Sauron";
+        }
+        if (r.getReponseQ10() == R.id.rb_q10_rep4) {
+            return "Joker";
+        }
         if (r.getReponseQ7() == R.id.rb_q7_rep3 && r.getReponseQ2() == R.id.rb_q2_rep1) {
             return "Paul Atreides";
         }
-
         if (r.getReponseQ1() == R.id.rb_q1_rep1 && r.getReponseQ2() == R.id.rb_q2_rep2) {
             return "Pippin";
         }
-        return "Un Aventurier (Paul Atreides)";
+        return "Un aventurier";
     }
 
     private void afficherImagePersonnage(String personnage) {
@@ -113,7 +110,7 @@ public class Result extends AppCompatActivity {
                 ivResultatImage.setImageResource(R.drawable.muzan_jackson);
                 break;
             case "Paul Atreides":
-            case "Un Aventurier (Paul Atreides)":
+            case "Un aventurier":
                 ivResultatImage.setImageResource(R.drawable.paul);
                 break;
             case "Pippin":
@@ -126,7 +123,7 @@ public class Result extends AppCompatActivity {
                 ivResultatImage.setImageResource(R.drawable.cyberpunk);
                 break;
             default:
-                        // ON CACHE L'IMAGE SI Y A UN SOUCI.
+                //       Cache l'image si aucun personnage est trouvé
                 ivResultatImage.setVisibility(View.GONE);
                 break;
         }

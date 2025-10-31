@@ -11,7 +11,7 @@
         android:id="@+id/btn_quitter_accueil2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="32dp"
         android:backgroundTint="@android:color/holo_red_dark"
         android:onClick="onQuitterClick"
         android:text="@string/quitter"
@@ -23,24 +23,39 @@
         android:id="@+id/tv_resultat_final"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/calcul_des_r_sultats"
+        android:text="Vous êtes..."
         android:textAlignment="center"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/tv_personnage_nom"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.414" />
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tv_personnage_nom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resultat_final"
+        tools:text="Batman !" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="167dp"
-        android:layout_height="237dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/btn_quitter_accueil2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ville_future" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_personnage_nom"
+        tools:srcCompat="@drawable/batman" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

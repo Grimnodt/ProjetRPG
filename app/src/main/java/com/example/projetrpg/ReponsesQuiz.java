@@ -44,7 +44,7 @@ public class ReponsesQuiz implements Parcelable {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             in.readList(reponseQ4, Integer.class.getClassLoader(), Integer.class);
         } else {
-            in.readList(reponseQ4, Integer.class.getClassLoader());
+            in.readList(reponseQ4, Integer.class.getClassLoader()); // NORMAL C'EST DEPRECATED MASI ON L'UTILISE PAS.
         }
 
         reponseMajeur = in.readByte() != 0;
