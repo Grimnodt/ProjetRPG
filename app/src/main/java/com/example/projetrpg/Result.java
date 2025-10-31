@@ -15,6 +15,7 @@ public class Result extends AppCompatActivity {
 
     private ReponsesQuiz reponses;
     private TextView tvResultatFinal;
+    private TextView tvPersonnage;
     private ImageView ivResultatImage;
 
     @Override
@@ -30,6 +31,7 @@ public class Result extends AppCompatActivity {
         });
 
         tvResultatFinal = findViewById(R.id.tv_resultat_final);
+        tvPersonnage = findViewById(R.id.tv_personnage);
         ivResultatImage = findViewById(R.id.imageView);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
@@ -40,10 +42,10 @@ public class Result extends AppCompatActivity {
 
         if (reponses != null) {
             String personnage = analyserReponses(reponses);
-            tvResultatFinal.setText("Vous êtes...\n" + personnage + " !");
+            tvPersonnage.setText(personnage + " !");
             afficherImagePersonnage(personnage);
         } else {
-            tvResultatFinal.setText("Erreur: Impossible de charger les résultats.");
+            tvPersonnage.setText("Erreur: Impossible de charger les résultats.");
         }
     }
 

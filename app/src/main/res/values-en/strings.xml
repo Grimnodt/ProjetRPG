@@ -60,13 +60,13 @@
     <string name="_1">1</string>
     <string-array name="liste_de_mots">
         <item>Save the city..</item>
-        <item>Sauver mon/ma mari/femme.</item>
-        <item>Sauver aucun des deux, je suis sans coeur.</item>
-        <item>Je sauve les deux. Tel est mon Nindo.</item>
-        <item>Je sauve Gotham.</item>
-        <item>Je deviens allié avec les méchants menancant de les tuer.</item>
+        <item>Save my wife/husband.</item>
+        <item>Save no one, I am HEARTLESS.</item>
+        <item>I save both.Here is my Nindo.</item>
+        <item>I save Gotham.</item>
+        <item>I ally myself with the villains, threatening to kill them.</item>
     </string-array>
-    <string name="calcul_des_r_sultats">Calculating results...</string>
+    <string name="calcul_des_r_sultats">You are...</string>
     <string name="accueil_titre">home_title</string>
     <string name="demarrer">Start</string>
     <string name="r_pond_nos_questions_et_d_couvre_ton_personnage_de_fiction">Answer our questions and discover your fictional character!</string>
