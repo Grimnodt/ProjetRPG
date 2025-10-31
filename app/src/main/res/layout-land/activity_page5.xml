@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_main_page5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contentDescription="@string/todo"
+    tools:context=".Activity_page5">
+
+    <TextView
+        android:id="@+id/tv_titre5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quel_personnage_de_fiction_es_tu"
+        app:layout_constraintBottom_toTopOf="@+id/tv_question10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.41" />
+
+    <TextView
+        android:id="@+id/tv_question10"
+        android:layout_width="341dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/vous_trouvez_un_artefact_de_pouvoir_immense_et_corrupteur_comme_le_p_ch_du_r_confort_ou_l_anneau_unique_que_faites_vous"
+        app:layout_constraintBottom_toTopOf="@+id/rg_question10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <RadioGroup
+        android:id="@+id/rg_question10"
+        android:layout_width="354dp"
+        android:layout_height="201dp"
+        android:layout_marginBottom="44dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_question11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/rb_q10_rep1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/je_le_d_truis_quel_qu_en_soit_le_prix" />
+
+        <RadioButton
+            android:id="@+id/rb_q10_rep2"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:text="@string/je_tente_de_l_utiliser_pour_faire_le_bien_malgr_les_risques"
+            tools:ignore="TextSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/rb_q10_rep3"
+            android:layout_width="261dp"
+            android:layout_height="wrap_content"
+            android:text="@string/je_le_cache_du_monde_pour_prot_ger_les_autres_et_moi_m_me"
+            tools:ignore="TextSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/rb_q10_rep4"
+            android:layout_width="253dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ce_pouvoir_est_moi_je_l_utiliserai_pour_atteindre_mes_propres_objectifs"
+            tools:ignore="TextSizeCheck" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_question11"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/quel_paysage_vous_appelle_le_plus_pour_commencer_votre_aventure"
+        app:layout_constraintBottom_toTopOf="@+id/iv_paysage1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <ImageView
+        android:id="@+id/iv_paysage1"
+        android:layout_width="174dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="12dp"
+        android:contentDescription="@string/description_paysage_sombre"
+        app:layout_constraintBottom_toTopOf="@+id/rg_question11"
+        app:layout_constraintEnd_toStartOf="@+id/iv_paysage2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/moyen_age_ville" />
+
+    <ImageView
+        android:id="@+id/iv_paysage2"
+        android:layout_width="114dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+        android:contentDescription="@string/description_paysage_colore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_question11"
+        app:srcCompat="@drawable/ville_future" />
+
+    <RadioGroup
+        android:id="@+id/rg_question11"
+        android:layout_width="55dp"
+        android:layout_height="99dp"
+        android:layout_marginEnd="250dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_valider5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/rb_q11_rep1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_1" />
+
+        <RadioButton
+            android:id="@+id/rb_q11_rep2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_2" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_invalid5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text=""
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toTopOf="@+id/btn_valider5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_valider5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="onValiderClick"
+        android:text="@string/valider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
