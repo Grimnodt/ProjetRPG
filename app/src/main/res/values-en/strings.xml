@@ -58,6 +58,14 @@
     <string name="todo">TODO</string>
     <string name="_2">2</string>
     <string name="_1">1</string>
+    <string-array name="liste_de_mots">
+        <item>Save the city..</item>
+        <item>Sauver mon/ma mari/femme.</item>
+        <item>Sauver aucun des deux, je suis sans coeur.</item>
+        <item>Je sauve les deux. Tel est mon Nindo.</item>
+        <item>Je sauve Gotham.</item>
+        <item>Je deviens allié avec les méchants menancant de les tuer.</item>
+    </string-array>
     <string name="calcul_des_r_sultats">Calculating results...</string>
     <string name="accueil_titre">home_title</string>
     <string name="demarrer">Start</string>
