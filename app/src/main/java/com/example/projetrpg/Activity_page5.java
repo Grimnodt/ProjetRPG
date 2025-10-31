@@ -1,6 +1,5 @@
 package com.example.projetrpg;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -21,7 +20,6 @@ public class Activity_page5 extends AppCompatActivity {
     private RadioGroup rgQuestion10;
     private RadioGroup rgQuestion11;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
