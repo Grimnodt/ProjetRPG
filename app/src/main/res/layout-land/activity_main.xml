@@ -30,12 +30,12 @@
 
     <RadioGroup
         android:id="@+id/rg_question1"
-        android:layout_width="320dp"
-        android:layout_height="195dp"
-        android:layout_marginBottom="36dp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_question2"
+        android:layout_width="329dp"
+        android:layout_height="208dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_quitter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextSizeCheck">
 
@@ -68,8 +68,8 @@
         android:id="@+id/tv_question2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginStart="504dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/votre_plus_grande_force_c_est"
         app:layout_constraintBottom_toTopOf="@+id/rg_question2"
         app:layout_constraintStart_toStartOf="parent" />
@@ -78,10 +78,10 @@
         android:id="@+id/rg_question2"
         android:layout_width="320dp"
         android:layout_height="203dp"
-        android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_invalid"
+        android:layout_marginBottom="59dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_valider"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextSizeCheck">
 
