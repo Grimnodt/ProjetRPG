@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Projet RPG</string>
+    <string name="comment_r_agis_tu_face_un_conflit_tu">How do you react to conflict?</string>
+    <string name="valider">Validate</string>
+    <string name="votre_plus_grande_force_c_est">"What is your biggest strength ? "</string>
+    <string name="je_fuis">I flee</string>
+    <string name="mon_intelligence_et_ma_capacit_d_analyse">My intelligence and my analytical capacities</string>
+    <string name="je_fonce_dans_le_tas">I dive right in!</string>
+</resources>
